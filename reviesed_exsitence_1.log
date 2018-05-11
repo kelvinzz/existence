@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99997 (MiKTeX 2.9.6300 64-bit) (preloaded format=xelatex 2017.4.21)  10 MAY 2018 13:14
+This is XeTeX, Version 3.14159265-2.6-0.99997 (MiKTeX 2.9.6300 64-bit) (preloaded format=xelatex 2017.4.21)  11 MAY 2018 12:47
 entering extended mode
 **./reviesed_exsitence_1.tex
 (reviesed_exsitence_1.tex
@@ -546,7 +546,7 @@ tion; Bi-level optimization; Incentive-compatibility;
  []
 
 [1] [2] [3] [4] [5] [6] [7]
-Overfull \hbox (1.13753pt too wide) in paragraph at lines 573--574
+Overfull \hbox (1.13753pt too wide) in paragraph at lines 577--578
 []\TU/lmr/m/n/10.95 Since $\OML/cmm/m/it/10.95 y[] \OMS/cmsy/m/n/10.95 2 \OML/c
 mm/m/it/10.95 @[]u\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x[]\OT1/cmr/m/n/10.95
  )$\TU/lmr/m/n/10.95 , by definitions of $\OML/cmm/m/it/10.95 G$\TU/lmr/m/n/10.
@@ -558,38 +558,24 @@ cmm/m/it/10.95 x[]; y[]; u\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x[]\OT1/cmr/m
  []
 
 [8] [9] [10] [11]
-Overfull \hbox (3.13132pt too wide) in paragraph at lines 725--726
+Overfull \hbox (9.82304pt too wide) in paragraph at lines 729--730
 []\TU/lmr/m/n/10.95 Therefore, we have $\OMS/cmsy/m/n/10.95 jj\OML/cmm/m/it/10.
 95 u[]\OMS/cmsy/m/n/10.95 jj[] ^^U jj\OML/cmm/m/it/10.95 u[]\OMS/cmsy/m/n/10.95
  jj[] ^^U [][] \OML/cmm/m/it/10.95 u[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x
-\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 dx \OMS/cmsy/m/n/10.95 ! \OT1/cmr/m/n/1
-0.95 +\OMS/cmsy/m/n/10.95 1$\TU/lmr/m/n/10.95 . This implies $[] \OMS/cmsy/m/n/
-10.95 jj\OML/cmm/m/it/10.95 u[]\OMS/cmsy/m/n/10.95 jj[] \OT1/cmr/m/n/10.95 =
+\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 dx [][]\OMS/cmsy/m/n/10.95 ! \OT1/cmr/m
+/n/10.95 +\OMS/cmsy/m/n/10.95 1$\TU/lmr/m/n/10.95 . This implies $[] \OMS/cmsy/
+m/n/10.95 jj\OML/cmm/m/it/10.95 u[]\OMS/cmsy/m/n/10.95 jj[] \OT1/cmr/m/n/10.95 
+=
  []
 
-[12]
-Overfull \hbox (12.63431pt too wide) in paragraph at lines 803--804
-\TU/lmr/m/n/10.95 subsequence, $\OML/cmm/m/it/10.95 y[]\OT1/cmr/m/n/10.95 (\OML
-/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ! []\OML/cmm/m/it/10.
-95 y\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 )$\TU/lmr/m/n/1
-0.95 . Since $\OML/cmm/m/it/10.95 ^^Y$ \TU/lmr/m/n/10.95 and $\OML/cmm/m/it/10.
-95 H$ \TU/lmr/m/n/10.95 are continuous, we have $\OML/cmm/m/it/10.95 ^^M\OT1/cm
-r/m/n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 ) = \OMS/cmsy/m/n/10.95 ^^
-@\OML/cmm/m/it/10.95 ^^Y\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x; []y\OT1/cmr/
-m/n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; H\OT1
-/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x; []y\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.
-95 x\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; u[]\OT1/cmr/m/n/10.95 (\OML/cmm/m
-/it/10.95 x\OT1/cmr/m/n/10.95 )))$\TU/lmr/m/n/10.95 . 
- []
-
-[13] [14] [15] (reviesed_exsitence_1.aux) ) 
+[12] [13] [14] [15] (reviesed_exsitence_1.aux) ) 
 Here is how much of TeX's memory you used:
- 7655 strings out of 427874
- 97769 string characters out of 3153062
- 229210 words of memory out of 3000000
- 11270 multiletter control sequences out of 15000+200000
+ 7653 strings out of 427874
+ 97737 string characters out of 3153062
+ 230210 words of memory out of 3000000
+ 11268 multiletter control sequences out of 15000+200000
  16658 words of font info for 84 fonts, out of 3000000 for 9000
  1476 hyphenation exceptions out of 8191
- 36i,17n,43p,1148b,318s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,17n,43p,1164b,326s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on reviesed_exsitence_1.pdf (15 pages).
