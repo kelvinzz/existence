@@ -251,7 +251,7 @@ s.t.\ p \text{  is lower semicontinuous}.
 We assume that $p$ is lower semicontinuous, without which the maximum in \eqref{eqn_optimal_product} may not be attained. However, in the equivalence form of $(P_0)$, this restriction will be encoded in $G$-convexity of the value functions, which will be shown in Proposition \ref{equiv_form}.\medskip
 %\vspace{1cm}
 
-This paper makes the followings assumptions. {We use $C^0(X)$ to denote the space of all continuous functions on $X$, and use $C^1(X)$ to denote the space of all differentiable functions on $X$ whose derivative is continuous.}\medskip%, i.e. continuous differentiable functions.} \medskip
+This paper makes the followings assumptions. {We use $C^0(X)$ to denote the space of all continuous functions on $X$, and use $C^1(X)$ to denote the space of all differentiable functions on $X$ whose derivative is continuous.} Note that, even in 1 dimensional case, we assume no single-crossing type condition.\medskip%, i.e. continuous differentiable functions.} \medskip
 
 
 %We adopt technical hypotheses, following from Carlier (Assumptions {assmp:Gcoordinate-monotone}-\ref{assmp:Gtech3}) and Trudinger (Assumptions \ref{assmp:Gregular} - \ref{assmp:Gdecreasing}) as below:\medskip
@@ -298,7 +298,7 @@ In Rochet-Chon$\acute{e}$'s model, $H(x,y,u) = x\cdot y -u$ and $\pi(x,y,z) = z-
 
 
 	\begin{assumption}\label{assmp:Gtech0}
-		$\pi(x,y,H(x,y,u))$ is super-linearly decreasing in $y$. That is, there exist $\alpha \ge 1$, $a_1, a_2> 0$ and $b\in \R$, such that $\pi(x,y,H(x,y,u)) \le -a_1 ||y||_{\alpha}^{\alpha} - a_2 u +b$ for all $ (x, y, u)\in X\times cl(Y)\times \R$, or equivalently, $\pi(x,y,z) + a_2 G(x,y,z) \le -a_1 ||y||_{\alpha}^{\alpha}  +b$ for all $ (x, y, z)\in X\times cl(Y)\times \R$.
+		$\pi(x,y,H(x,y,u))$ is super-linearly decreasing in $y$. That is, there exist $\alpha \ge 1$, $a_1, a_2> 0$ and $b\in \R$, such that $\pi(x,y,H(x,y,u)) \le -a_1 ||y||_{\alpha}^{\alpha} - a_2 u +b$ for all $ (x, y, u)\in \{ (x,y, G(x,y,z))| x\in X, y\in Y, z\in \R \}$; or equivalently, $\pi(x,y,z) + a_2 G(x,y,z) \le -a_1 ||y||_{\alpha}^{\alpha}  +b$ for all $ (x, y, z)\in X\times cl(Y)\times \R$.
 	\end{assumption}
 	
 	
@@ -323,7 +323,7 @@ Assumptions \ref{assmp:Gtech1}-\ref{assmp:Gtech3} are some technical assumptions
 %---For $G(x,y,z) = \langle x, y \rangle -f(z)$, Assumption \ref{assmp:Gtech1} will be reduced to 
 
 \begin{assumption}\label{assmp:Gtech2}
-	 $||D_x G(x,y,z)||_{1}$ increases sub-linearly in $y$. That is, there exist $ \beta \in (0, \alpha], c>0$, and $ d\in \R$, such that $||D_x G(x,y,z)||_{1}\le c||y||_{\beta}^{\beta} +d$ for all $ (x, y, z)\in X\times cl(Y) \times cl(Z)$.
+	 $||D_x G(x,y,z)||_{1}$ increases in $y$. More precisely, there exist $ \beta \in (0, \alpha], c>0$, and $ d\in \R$, such that $||D_x G(x,y,z)||_{1}\le c||y||_{\beta}^{\beta} +d$ for all $ (x, y, z)\in X\times cl(Y) \times cl(Z)$.
 \end{assumption}
 
 
