@@ -314,7 +314,7 @@ Similarly, one can also generalize the definition of subdifferential from \eqref
 	%$G$-convex % 
 	function $u: X \longrightarrow \R$ is a point-to-set mapping defined by
 	\begin{equation*}
-	\partial^G u(x):= \{ y\in  cl(Y)| u(x')\ge G(x',y, H(x,y,u(x))), \text{ for all } x'\in X\}.
+	\partial^G u(x):= \{ y\in  cl(Y)| H(x,y,u(x)) \text{ is defined and }u(x')\ge G(x',y, H(x,y,u(x))) \text{ for all } x'\in X\}.
 	\end{equation*}
 	
 	A function $u$ is said to be {\it $G$-subdifferentiable} at $x$ if and only if $\partial^G u(x) \neq \emptyset$.\footnote{In Trudinger \cite{Trudinger14}, this point-to-set mapping $\partial^G u$ is also called $G$-$normal$ mapping; see paper for more properties related to $G$-convexity.}
@@ -526,6 +526,8 @@ In this section, we state the existence theorem, the proof of which is provided 
 Technically, in order to demonstrate existence, we start from a sequence of value-product pairs, whose total profits have a limit that is equal to the supreme of $(P)$.
 Then we need to show that this sequence converges, up to a subsequence, to a pair of limit mappings. Then we show this limit value-product pair satisfies the constraints of $(P)$; and its corresponding total payoff is better (or no worse) than those of any other admissible pairs. \medskip
 
+Suppose $Y$ is bounded, then Assumption \ref{assmp:Gtech0} - \ref{assmp:Gtech3} could be simplified, and Proposition \ref{Subdiff/Bdd} holds automatically. Besides, some steps in the proof of the main theorem would be simplified. If, in addition, both $Y$ and $Z$ are bounded, Assumption \ref{assmp:Gtech0} - \ref{assmp:Gtech3} are automatically satisfied. \medskip
+
 In the following, we denote $W^{1,1}(X)$ as the Sobolev space of $L^1$ functions whose first derivatives exist in the weak sense and belong to $L^1(X)$. For more properties of Sobolev spaces and weak derivatives, see Evans~\cite[Chapter 5]{Evans98}. If $\omega$ is some open subset of $X$, notation $\omega \subset \subset X$ means the closure of $\omega$ is also included in $X$.\medskip
 
 Lemma \ref{lemma1} provides sequence convergence results of convex functions, which are uniformly bounded in Sobolev spaces on open convex subsets. We state this classical result without proof, which can be found in Carlier \cite{Carlier01}.\medskip
@@ -725,6 +727,7 @@ Define $v_n(x):= u_n(x) +\lambda ||x||^2$. Then
 	Let $u^*(x):=v^*(x)-\lambda||x||^2$, then  $(u_n)$ converges to $u^*$ uniformly on compact subset of $X$ and $(\nabla u_n)$ converges to $\nabla u^*$ pointwise in A.\medskip
 	
 {\bf Step 4:}	Finally, let us prove that $u^*$ is $G$-convex.\medskip
+
 	Define $\Gamma(x):=\cap_{i\ge 1}\overline{\cup_{n\ge i}\partial^G u_n(x)}$, for all $x\in X$.\medskip
 	%$\tilde{u}(x):=\sup\limits_{x'\in X, y\in \Gamma (x')}G(x,y,H(x',y,u^*(x')))$, where\medskip 
 	
