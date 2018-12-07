@@ -79,6 +79,8 @@
 \newcommand{\Lip}{\operatorname{Lip}}
 
 \newcommand{\argmin}{\operatornamewithlimits{argmin}}
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 %\newcommand{\dim}{\operatorname{dim}}
 
 \makeatletter
@@ -117,7 +119,7 @@
 	%A monopolist wishes to maximize her profit by finding an optimal price menu. Given the price list by monopolist, each agent will choose to buy that product which maximizes his own utility. Then the principal will maximize her total profits which is the sum of net earnings from each product sold, whose distribution is based on the choices of agents, and thus fundamentally depends on the distribution of agents and also price menu. In this paper, we provide an existence proof of adverse-selection principal-agent problems, a generalization Carlier's approach (2001), without requiring quasilinear utility. 
 	%Using $G$-convex analysis, we 
 	{We first} formulate the principal's {problem} %objective 
-	as a maximization problem with $G$-convexity constraints, %before presenting the existence result.
+	as a maximization problem with $G$-convexity constraints %before presenting the existence result.
 	{and then use $G$-convex analysis to prove existence.} \medskip 
 
 	{\it Keywords:} Principal-agent problem; Adverse selection; Bi-level optimization; Incentive-compatibility; Non-quasilinearity
@@ -129,7 +131,7 @@
 
 \section{Introduction}\label{section:introduction}
 	This paper provides a general existence for a multidimensional nonlinear pricing model,  which is a natural extension of the models studied by Mussa-Rosen \cite{MussaRosen78}, %Roberts \cite{Roberts79}, 
-	Spence \cite{Spence74, Spence80}, Myerson \cite{Myerson81}, Baron-Myerson \cite{BaronMyerson82}, Maskin-Riley \cite{MaskinRiley84}, Wilson \cite{Wilson93}, Rochet-Chon\'e \cite{RochetChone98}, Monteiro-Page \cite{MonteiroPage98} and  Carlier~\cite{Carlier01}. A major distinction lies in whether the agents' private type is one-dimensional (such as \cite{MussaRosen78, MaskinRiley84}), or multidimensional (such as \cite{RochetChone98,MonteiroPage98, Carlier01}). Another distinction is whether preferences are quasilinear on price (such as \cite{Armstrong96, Carlier01}) or fully nonlinear (such as \cite{NoldekeSamuelson15p, McCannZhang17}), especially for multidimensional models.  
+	Spence \cite{Spence74, Spence80}, Myerson \cite{Myerson81}, Baron-Myerson \cite{BaronMyerson82}, Maskin-Riley \cite{MaskinRiley84}, Wilson \cite{Wilson93}, Rochet-Chon\'e \cite{RochetChone98}, Monteiro-Page \cite{MonteiroPage98} and  Carlier~\cite{Carlier01}. A significant distinction lies in whether the agents' private type is one-dimensional (such as \cite{MussaRosen78, MaskinRiley84}), or multidimensional (such as \cite{RochetChone98,MonteiroPage98, Carlier01}). Another distinction is whether preferences are quasilinear on price (such as \cite{Armstrong96, Carlier01}) or fully nonlinear (such as \cite{NoldekeSamuelson15p, McCannZhang17}), especially for multidimensional models.  
 	\medskip
 	
 	This paper proves the existence of a (price menu) solution to a multidimensional multiproduct monopolist problem, {by extending} %in an extension of 
@@ -139,7 +141,9 @@
 	
 
 
-Consider the problem for a multiproduct monopolist who sells indivisible products to a population of consumers, who each buy at most one unit. Assume there is neither cooperation nor competition between agents. Additionally, assume the monopolist is able to produce enough of each product such that there are neither product supply shortages {nor economies of scale}. Taking into account participation constraints and incentive compatibility, the monopolist would like to find the optimal menu of prices to maximize her total profit.\medskip
+Consider the problem for a multiproduct monopolist (the principal) who sells indivisible products to a population of consumers (agents), who each buy at most one unit. %Assume there is neither cooperation nor competition between agents. 
+%Additionally, a
+Assume the monopolist is able to produce enough of each product such that there are neither product supply shortages {nor economies of scale}. Taking into account participation constraints and incentive compatibility, the monopolist would like to find the optimal menu of prices to maximize her total profit.\medskip
 
 	In this paper, we first identify incentive compatibility with a $G$-convexity constraint, before rewriting the maximization problem by converting the optimization variables from a product-price pair of mappings to a product-value pair. It can then be shown that the product-value pair converges under the $G$-convexity constraint. The existence result follows. \medskip
 
@@ -157,19 +161,19 @@ For the quasilinear case, where the utility function depends linearly on price, 
 
 
 When parameterization of preferences is linear in agent types and price, Rochet and Chon\'e (1998, \cite{RochetChone98}) not only obtain existence results but also partially characterize optimal solutions and expound their economic interpretations, %the solution for optimality with economic interpretations, 
-given that monopolist profits can be characterized by {the aggregate difference between selling prices and quadratic manufacturing costs.}\medskip
+given that the monopolist profit can be characterized by {the aggregate difference between selling prices and quadratic manufacturing costs.}\medskip
 
-More generally, Carlier \cite{Carlier01} has proved existence results for general quasilinear utilities, where agent type and product type are not necessarily of the same dimension and monopolist profit equals selling price minus some linear manufacturing cost.\medskip
+More generally, Carlier \cite{Carlier01} has proved existence results for general quasilinear utilities, where agent type and product type are not necessarily of the same dimension and the monopolist profit equals selling price minus some linear manufacturing cost.\medskip
 
 This paper generalizes the quasilinear case to the non-quasilinear case, which has many potential applications. For example, some fully nonlinear utilities include scenarios where agents are more sensitive to higher prices and where different agents might have different sensitivities to the same price. %utility $G(x,y,p(y)) = b(x,y) - p^3(y)$ describes the scenario when agents are more sensitive to the higher price, given all prices are greater than 1; and $G(x,y,p(y))=b(x,y)-f(x,p(y))$ presents one of the situations where various agents would have different sensitivities to the same price. 
 See Wilson~\cite[Chapter 7]{Wilson93} for the importance of taking income effects into account. 
-The generalized existence problem is also mentioned as a conjecture by Basov \cite[Chapter~8]{Basov05}. However, only a few results are known for the multidimensional non-quasilinear case, and the impact of price on utility could be much more complicated.\medskip
+The generalized existence problem also appears as a conjecture by Basov \cite[Chapter~8]{Basov05}. However, only a few results are known for the multidimensional non-quasilinear case, and the impact of price on utility could be much more complicated.\medskip
 
 
-Recently, N\"oldeke-Samuelson \cite{NoldekeSamuelson15p} provided a general existence result assuming that the consumer and product space are compact, by implementing a duality argument based on Galois connections. McCann-Zhang \cite{McCannZhang17} not only showed a general existence result assuming the single-crossing type condition and
-boundedness of the consumer-type and product-type spaces, %given that the consumer and product space are bounded,
-but generalized uniqueness and convexity results of Figalli-Kim-McCann \cite{FigalliKimMcCann11} to the non-quasilinear case, by using $G$-convexity arguments. In this paper, we also explore existence using $G$-convex analysis, which will be introduced in Subsection \ref{subsection:preliminary}, but with less restriction on boundedness of the product domain and without assuming the generalized single-crossing condition~\cite{McAfeeMcMillan88}. As a result of the lack of natural compactness, the proof of the existence result in this paper is quite different from that in either of the %se 
-earlier papers. It should be mentioned here that the existence results from this paper and the earlier two require no restrictions on the monopolist profit to take on a special
+Recently, N\"oldeke-Samuelson \cite{NoldekeSamuelson15p} provided a general existence result assuming that the agent and product space are compact, by implementing a duality argument based on Galois connections. McCann-Zhang \cite{McCannZhang17} not only showed a general existence result assuming the single-crossing type condition and
+boundedness of the agent-type and product-type spaces, %given that the consumer and product space are bounded,
+but generalized uniqueness and convexity results of Figalli-Kim-McCann \cite{FigalliKimMcCann11} to the non-quasilinear case, by using $G$-convexity arguments. In this paper, we also explore existence using $G$-convex analysis, which will be introduced in Subsection \ref{subsection:preliminary}, but with less restriction on boundedness of the product domain and without assuming the generalized single-crossing condition~\cite{McAfeeMcMillan88}. As a result of the lack of natural compactness, the proof of the existence result in this paper is entirely different from that in either of the %se 
+earlier papers. It should be mentioned here that the existence results from this paper and the earlier two require no restrictions on the monopolist profit to take on a particular %special
 form, which is a generalization from much of the literature.\medskip
 
 
@@ -178,7 +182,7 @@ form, which is a generalization from much of the literature.\medskip
 
 
 
-The remainder of this paper is organized as follows. Section \ref{section:model} states the mathematical model and assumptions. It also introduces preliminaries, including $G$-convexity and $G$-subdifferentiability, and reformulates the monopolist's problem. In Section \ref{section:mainresult}, we state the existence theorem (Theorem \ref{maintheorem}) as well as the convergence results for sequences of $G$-convex functions (Proposition \ref{proposition:convergence}). Section \ref{section:futurework} proposes some directions of future work. We leave all the proofs of lemmas, propositions and the existence theorem in Section \ref{section:proofs}. 
+The remainder of this paper is organized as follows. Section \ref{section:model} states the mathematical model and assumptions. It also introduces preliminaries, including $G$-convexity and $G$-subdifferentiability, and reformulates the monopolist's problem. In Section \ref{section:mainresult}, we state the existence theorem (Theorem \ref{maintheorem}) as well as the convergence results for sequences of $G$-convex functions (Proposition \ref{proposition:convergence}). Section \ref{section:futurework} proposes some directions for future work. We leave all the proofs of lemmas, propositions and the existence theorem in Section \ref{section:proofs}. 
  
 
 \bigskip
@@ -188,54 +192,65 @@ The remainder of this paper is organized as follows. Section \ref{section:model}
 
 
 
-{Our model of the principal-agent problem is a bilevel optimization. After a monopolist publishes her price menu, each agent maximizes his utility through the purchase of at most one product. Knowing only the distribution of agent types, the monopolist maximizes aggregate profits based on agents' choices, which are based on the price menus.}\medskip
+{Our model of the principal-agent problem is a bilevel optimization. After a monopolist publishes her price menu, each agent maximizes his utility through the purchase of at most one product. Knowing only the distribution of agent types, the monopolist maximizes aggregate profit based on agents' choices, which are based on the price menus.}\medskip
 
 
-Suppose the agents' preferences are given by some parametrized utility function  $G(x, y, z)$, where $x$ is a $M$-dimensional vector of consumer characteristics, $y$ is a $N$-dimensional vector of attributes of each product, and $z$ represents the price of each product. Denote {by} $X$ the space of agent types, by $Y$ the space of products, by $cl(Y)$ the closure of $Y$, by $Z$ the space of prices, and by $cl(Z)$ the closure of $Z$. {In this paper, we only consider the case where both agent types and product attributes are continuous.} \medskip
+Suppose the agents' preferences are given by some parametrized utility function  $G(x, y, z)$, where $x$ is an $M$-dimensional vector of agent characteristics, $y$ is an $N$-dimensional vector of attributes of each product, and $z$ represents the price of each product. Denote {by} $X$ the space of agent types, by $Y$ the space of products, by $cl(Y)$ the closure of $Y$, by $Z$ the space of prices, and by $cl(Z)$ the closure of $Z$. {In this paper, we only consider the case where both agent types and product attributes are continuous.} \medskip
 
-The monopolist sells indivisible products to agents, i.e., she will sell neither a part/percentage of one product nor a product with some probability. Each agent buys at most one unit of product. We assume no competition, cooperation, or communication between agents. For any given price menu $p: cl(Y) \longrightarrow cl(Z)$, an agent $x \in X$ knows his utility $G(x,y,p(y))$ for purchasing each product $y$ at price $p(y)$. It follows that each agent solves the following maximization problem 
+The monopolist sells indivisible products to agents, i.e., she will sell neither a part/percentage of one product nor a product with some probability. Each agent buys at most one unit of product. %We assume no competition, cooperation, or communication between agents. 
+For any given price menu $p: cl(Y) \rightarrow cl(Z)$, an agent $x \in X$ knows his utility $G(x,y,p(y))$ for purchasing each product $y$ at price $p(y)$. It follows that each agent solves the following maximization problem 
 \begin{equation}\label{eqn_optimal_product}
 	u(x):=\max_{y \in cl(Y)} G(x, y, p(y)),
 \end{equation}
-where $u(x)$ represents the maximal utility agent $x$ can obtain, and $u: X \longrightarrow \R$ is also called the value function or indirect utility function.%, given utility function $G: X \times cl(Y) \times Z \longrightarrow \R$.{\marginpar \color{blue} Jiaqi: - is this math necessary? - economists understand utility much better as a f(x,y,p(y)) — i.e. x,y,p(y) are inputs and plugging them into the function gives utility (#) output.. doesn’t need to be defined as  a mapping (which is more technical..) - generally, don’t need to define utility, profits, and cost functions as mappings (because they’re standard)—> is the mapping important to the math proof of your paper?}
+where $u(x)$ represents the maximal utility agent $x$ can obtain, and $u: X \rightarrow \R$ is also called the value function or indirect utility function.%, given utility function $G: X \times cl(Y) \times Z \rightarrow \R$.{\marginpar \color{blue} Jiaqi: - is this math necessary? - economists understand utility much better as a f(x,y,p(y)) — i.e. x,y,p(y) are inputs and plugging them into the function gives utility (#) output.. doesn’t need to be defined as  a mapping (which is more technical..) - generally, don’t need to define utility, profits, and cost functions as mappings (because they’re standard)—> is the mapping important to the math proof of your paper?}
 ~At this point, it is assumed that the maximum in \eqref{eqn_optimal_product} is attained for each agent $x$.
 \medskip
 
-If agent $x$ purchases product $y$ at price $p(y)$, the monopolist would earn from this transaction a profit of $\pi(x,y,p(y))$%, given that $\pi: X \times cl(Y) \times Z \longrightarrow \R$ 	
-.  {For example, monopolist profit can take the form $\pi(x,y,p(y)) = p(y)-c(y)$, where %the function $c: Y\longrightarrow \R$ represents manufacturing cost.} {\marginpar \color{blue} - sufficient to say that c(y) is a variable manufacturing cost function..  }
+If agent $x$ purchases product $y$ at price $p(y)$, the monopolist would earn from this transaction a profit of $\pi(x,y,p(y))$%, given that $\pi: X \times cl(Y) \times Z \rightarrow \R$ 	
+.  {For example, the monopolist profit can take the form $\pi(x,y,p(y)) = p(y)-c(y)$, where %the function $c: Y\rightarrow \R$ represents manufacturing cost.} {\marginpar \color{blue} - sufficient to say that c(y) is a variable manufacturing cost function..  }
 $c(y)$ is a variable manufacturing cost function.} Summing over all agents in the distribution $d\mu(x)$, the monopolist's total profit is characterized by 
 \begin{equation}\label{eqn_monopolist_integral}
 	\Pi(p, y):=\int_{X} \pi(x, y(x), p(y(x))) d\mu(x),
 \end{equation}
-which depends on her price menu $p: cl(Y) \longrightarrow cl(Z)$ and  agents' choices $y: X \longrightarrow cl(Y)$.\footnote{It is worth mentioning that in some literature, the monopolist's objective is to design a product line $\tilde{Y}$ (i.e.~a subset of $cl(Y)$) and a price menu $\tilde{p}: \tilde{Y} \longrightarrow \R$ that jointly maximize overall monopolist profit. Then, given $\tilde{Y}$ and $\tilde{p}$, an agent of type $x$ chooses the product $y(x)$ that solves
+which depends on her price menu $p: cl(Y) \rightarrow cl(Z)$ and  agents' choices $y: X \rightarrow cl(Y)$.\footnote{It is worth mentioning that in some literature, the monopolist's objective is to design a product line $\tilde{Y}$ (i.e.,~a subset of $cl(Y)$) and a price menu $\tilde{p}: \tilde{Y} \rightarrow \R$ that jointly maximize the overall monopolist profit. Then, given $\tilde{Y}$ and $\tilde{p}$, an agent of type $x$ chooses the product $y(x)$ that solves
 	\begin{equation*}
 		\max_{y \in \tilde{Y}} G(x,y, \tilde{p}(y)):= u(x).
 	\end{equation*}
-Allowing the price to take value $\bar{z}$ (which may be $+\infty$), and assuming Assumption \ref{assmp:Gregular} below, the effect of designing a product line $\tilde{Y}$ and price menu $\tilde{p}: \tilde{Y}\longrightarrow \R$ is equivalent to that of designing a price menu $p : cl(Y)\longrightarrow (-\infty, +\infty]$, which equals $\tilde{p}$ on $\tilde{Y}$ and maps $cl(Y) \setminus \tilde{Y}$ to $\bar{z}$, such that no agents choose to purchase any product from $cl(Y) \setminus \tilde{Y}$, which is less attractive than the outside option $y_{\emptyset}$ according to Assumption \ref{assmp:Gregular}. In this paper, we use the latter as the monopolist's objective.
+Allowing the price to take value $\bar{z}$ (which may be $+\infty$), and assuming Assumption \ref{assmp:Gregular} below, the effect of designing a product line $\tilde{Y}$ and price menu $\tilde{p}: \tilde{Y}\rightarrow \R$ is equivalent to that of designing a price menu $p : cl(Y)\rightarrow (-\infty, +\infty]$, which equals $\tilde{p}$ on $\tilde{Y}$ and maps $cl(Y) \setminus \tilde{Y}$ to $\bar{z}$, such that no agents choose to purchase any product from $cl(Y) \setminus \tilde{Y}$, which is less attractive than the outside option $y_{\emptyset}$ according to Assumption \ref{assmp:Gregular}. In this paper, we use the latter as the monopolist's objective.
  \vspace{0.1cm}
  
-For any given price menu $p: cl(Y)\longrightarrow (-\infty, +\infty]$, one can construct a mapping $y: X \longrightarrow cl(Y)$ such that each $y(x)$ solves the maximization problem in \eqref{eqn_optimal_product}. But such mapping is not unique, for some fixed price menu, without the single-crossing type assumptions. %JIAQI- either use both commas, or can remove~
+For any given price menu $p: cl(Y)\rightarrow (-\infty, +\infty]$, one can construct a mapping $y: X \rightarrow cl(Y)$ such that each $y(x)$ solves the maximization problem in \eqref{eqn_optimal_product}. But such mapping is not necessarily unique%, for some fixed price menu
+, without the single-crossing type assumptions. %JIAQI- either use both commas, or can remove~
 Therefore, we adopt in \eqref{eqn_monopolist_integral} the total profit as a functional of both price menu~$p$ and its corresponding mapping $y$.}\medskip
 
-%where $x\in X \longmapsto y(x) \in cl(Y)$ denotes that product which agent $x$ chooses to buy, $p: cl(Y) \longrightarrow Z$ represents her price menu and $d\mu(x)$ stands for the distribution of agents.\medskip
+{
+\begin{remark}
+One can replace the constraint
+\begin{equation}\label{product-p}
+	y(x)\in \argmax_{y\in cl(Y)} G(x.y, p(y)),
+\end{equation}
+which is derived from equation \eqref{eqn_optimal_product}, by the incentive compatibility defined below, which are equivalent in the following sense: (1) all product-price pair satisfying \eqref{product-p} is incentive compatible; (2) for any incentive compatible product-price pair, there exists an (equivalent)  incentive compatible product-price pair which has the same value under the functional $\Pi$ and satisfies \eqref{product-p}.
+\end{remark}
+}
+%where $x\in X \longmapsto y(x) \in cl(Y)$ denotes that product which agent $x$ chooses to buy, $p: cl(Y) \rightarrow Z$ represents her price menu and $d\mu(x)$ stands for the distribution of agents.\medskip
 
-% DISCUSS/CLARIFY WITH XIANWEN:
-{%Since agents' individual characteristic is not observable by the monopolist who only knows its distribution
-Since the monopolist only observes the overall distribution of agent attributes and is unable to distinguish individual agent characteristics, the monopolist takes into account the following incentive-compatibility constraint when determining product-price pairs $(y, p(y))$.
-	}
+%% DISCUSS/CLARIFY WITH XIANWEN:
+%{%Since agents' individual characteristic is not observable by the monopolist who only knows its distribution
+%Since the monopolist only observes the overall distribution of agent attributes and is unable to distinguish individual agent characteristics, the monopolist takes into account the following incentive-compatibility constraint when determining product-price pairs $(y, p(y))$.
+%	}
 
-\begin{definition}[incentive compatibility]
-	A (product, price) pair of measurable mappings $(y,z): X \longrightarrow cl(Y) \times cl(Z)$ on agent space $X$ is \textit{incentive compatible} if and only if $G(x,y(x),z(x)) \ge G(x, y(x'), z(x'))$ for all $(x,x')\in X^2$.
+\begin{definition}[Incentive compatibility]
+	A (product, price) pair of measurable mappings $(y,z): X \rightarrow cl(Y) \times cl(Z)$ on agent space $X$ is \textit{incentive compatible} if and only if $G(x,y(x),z(x)) \ge G(x, y(x'), z(x'))$ for all $(x,x')\in X^2$.
 \end{definition}
 
-Therefore, an incentive-compatible product-price pair $(y, p(y))$ ensures that no agent has the incentive to pretend to be another agent type.\medskip 
+An incentive-compatible product-price pair $(y, p(y))$ ensures that no agent has the incentive to pretend to be another agent type.\medskip 
 
 
 In addition, we adopt a participation constraint in order to rule out the possibility of the monopolist charging exorbitant prices and the agents still having to make transactions despite this: each agent $x\in X$ will refuse to participate to the market if the maximum utility he can obtain %, $u(x)$, 
 is less than %some predetermined number 
-his reservation value $u_{\emptyset}(x)$, where the function $u_{\emptyset}: X \longrightarrow \R$ is given in the form $u_{\emptyset}(x): = G(x, y_{\emptyset}, z_{\emptyset})$, for some $(y_{\emptyset}, z_{\emptyset}) \in cl(Y \times Z)$, where $y_{\emptyset}$ represents the outside option, whose price equals to some fixed value $z_{\emptyset} \in \R$ beyond the monopolist's control. \medskip
+his reservation value $u_{\emptyset}(x)$, where the function $u_{\emptyset}: X \rightarrow \R$ is given in the form $u_{\emptyset}(x): = G(x, y_{\emptyset}, z_{\emptyset})$ for some $(y_{\emptyset}, z_{\emptyset}) \in cl(Y \times Z)$, where $y_{\emptyset}$ represents the outside option, whose price equals to some fixed value $z_{\emptyset} \in \R$ beyond the monopolist's control. \medskip
 
-{For monopolist profit, some literature assumes $\pi(x, y_{\emptyset}, z_{\emptyset}) \ge  0$ for all $x\in X$ to ensure that the outside option is harmless to the monopolist. Here, it is not necessary to adopt such an assumption for the sake of generality. \medskip} 
+{For the monopolist profit, some literature assumes $\pi(x, y_{\emptyset}, z_{\emptyset}) \ge  0$ for all $x\in X$ to ensure that the outside option is harmless to the monopolist. Here, it is not necessary to adopt such an assumption for the sake of generality. \medskip} 
 
 The monopolist's problem can be described as follows:
 
@@ -244,10 +259,11 @@ The monopolist's problem can be described as follows:
 (P_0)
 \begin{cases}
 \sup \Pi(p,y)=\int_{X} \pi(x, y(x), p(y(x)))~ d\mu(x)\\
-s.t.\ (y,p(y)) \text{~is incentive compatible%incentive compatibility
+s.t.\\
+(y,p(y)) \text{~is incentive compatible%incentive compatibility
 	};\\
-s.t.\  G(x, y(x), p(y(x))) \ge u_{\emptyset}(x) \text{ for all } x \in X;\\
-s.t.\ p \text{  is lower semicontinuous}.
+ G(x, y(x), p(y(x))) \ge u_{\emptyset}(x) \text{ for all } x \in X;\\
+ p \text{  is lower semicontinuous}.
 \end{cases}
 \end{equation}
 
@@ -259,21 +275,21 @@ We assume that $p$ is lower semicontinuous, without which the maximum in \eqref{
 The purpose of the following subsections is to fix terminology and prepare the preliminaries for the main results in the next section.
 The proofs can be found in Section \ref{section:proofs}.\medskip
 
-\subsection{$G$-convex and $G$-subdifferentiability}
+\subsection{$G$-Convex and $G$-Subdifferentiability}
 \label{subsection:preliminary}
 
-In this subsection, we introduce some tools from convex analysis and the notion of $G$-convexity (c.f. \cite{Trudinger14,Balder77,Singer97}), which is a generalization of ordinary convexity. {Several results in this subsection echo those from Section 3 of McCann-Zhang \cite{McCannZhang17} but extended to unbounded domains.}  \medskip
+In this subsection, we introduce some tools from convex analysis and the notion of $G$-convexity (c.f. \cite{Trudinger14,Balder77,Singer97}), which is a generalization of ordinary convexity. {Several results in this subsection echo those from Section 3 of McCann-Zhang \cite{McCannZhang17} but extend to unbounded domains.}  \medskip
 
-The following assumptions are made to the agents' direct utility $G$. We use $C^0(X)$ to denote the space of all continuous functions on $X$, and use $C^1(X)$ to denote the space of all differentiable functions on $X$ whose derivatives are continuous.  \medskip
+The following assumptions are made to the agents' direct utility $G$. We use $C^0(X)$ to denote the space of all continuous functions on $X$ and use $C^1(X)$ to denote the space of all differentiable functions on $X$ whose derivatives are continuous.  \medskip
  
  \begin{assumption}\label{assmp:Gregular}
  	Agents' utility $G \in C^{1}(cl(X\times Y \times Z))$, where the space of agents $X$ is a bounded open convex subset in $\R^M$ with $C^1$ boundary%$\R_{+}^M$ with $C^1$ boundary {which does not intersect with the boundary of $\R_{+}^M$}
  	, the space of products $Y \subset \R^N$%$Y \subset \R^N_{ +}$ needed by coordinate-monotonicity
- 	, and range of prices $Z=(\munderbar z,\bar z)$ with $-\infty < \munderbar z < \bar z \le +\infty$. {Assume $G(x,y,\bar{z}) := \lim_{z\longrightarrow \bar{z}} G(x,y,z) \le G(x, y_{\emptyset}, z_{\emptyset})$, for all $(x,y) \in X \times cl(Y)$; and assume this inequality is strict when $\bar{z} = +\infty$.}
+ 	, and range of prices $Z=(\munderbar z,\bar z)$ with $-\infty < \munderbar z < \bar z \le +\infty$. {Assume $G(x,y,\bar{z}) := \lim_{z\rightarrow \bar{z}} G(x,y,z) \le G(x, y_{\emptyset}, z_{\emptyset})$ for all $(x,y) \in X \times cl(Y)$; and assume this inequality is strict when $\bar{z} = +\infty$.}
  \end{assumption}
  
  Here we do not necessarily assume $X$, $Y$, and $Z$ are compact spaces; in particular, $Y$ and $Z$ are potentially unbounded %(i.e.\ we do not set \textit{a priori} bounds for product space or price).
- (i.e.\ we do not set  \textit{a priori} bounds for product attributes or an \textit{a priori} upper bound for price). However, we do specify a lower bound for the price range, since the monopolist has no incentive to set price close to negative infinity. The last inequality shows the highest price $\bar{z}$ is less preferred than the outside option. %{\color{purple} Here $\bar{z}$ is an uninteresting price to all the agents, for example $\bar{z} = +\infty$. }%, {as well as an upper bound for price range, since agents would purchase an outside product when price equals positive infinity.} 
+ (i.e.,\ we do not set  \textit{a priori} bounds for product attributes or an \textit{a priori} upper bound for prices). However, we do specify a lower bound for the price range, since the monopolist has no incentive to set price close to negative infinity. The last inequality shows the highest price $\bar{z}$ is less preferred than the outside option. %{\color{purple} Here $\bar{z}$ is an uninteresting price to all the agents, for example $\bar{z} = +\infty$. }%, {as well as an upper bound for price range, since agents would purchase an outside product when price equals positive infinity.} 
  \medskip
  
  
@@ -284,12 +300,12 @@ The following assumptions are made to the agents' direct utility $G$. We use $C^
  \end{assumption}
  
  
- This is to say that, the higher the price paid to the monopolist, the lower the utility that will be left for the agent, for any given product. %natural since agent's benefit is decreasing with respect to the utility transferred to the monopolist, for the fixed product.
+ This is to say that, for any given product, the higher the price paid to the monopolist, the lower the utility that will be left for the agent. %natural since agent's benefit is decreasing with respect to the utility transferred to the monopolist, for the fixed product.
  For each $(x, y) \in X\times cl(Y)$ %AND
  and $u\in G(x,y, cl(Z))$, define $H(x,y,u) := z$ %WHENEVER
  whenever $G(x,y,z) = u$, i.e., $H(x, y, \cdot)= G^{-1}(x,y,\cdot)$. Therefore, $H(x,y,u)$ represents the price paid by agent $x$ for product $y$ when receiving value $u$.\medskip
  
- Proposition \ref{lemma_continuity} shows that the inverse function of $G$ is also continuous, because $G$ is continuous and monotonic on the price variable. \medskip
+ Proposition \ref{lemma_continuity} shows that the inverse function of $G$ is also continuous because $G$ is continuous and monotonic on the price variable. \medskip
  
  \begin{proposition}\label{lemma_continuity}
  	Given Assumption \ref{assmp:Gregular} and Assumption \ref{assmp:Gdecreasing}, the function $H$ is continuous.
@@ -297,16 +313,16 @@ The following assumptions are made to the agents' direct utility $G$. We use $C^
 
 {Recall that the subdifferential of a function $u$ at $x_0$ is defined as the set:
 	\begin{equation*}
-	\partial u(x_0) = \left\{ y \in cl(Y)| u(x) - u(x_0) \ge \langle  x- x_0,  y \rangle, \text{ for all } x \in X  \right\}.
+	\partial u(x_0) = \left\{ y \in cl(Y)|~ u(x) - u(x_0) \ge \langle  x- x_0,  y \rangle \text{ for all } x \in X  \right\}.
 	\end{equation*}
 	Here we use $ \langle , \rangle$ to denote the Euclidean inner product. This set is nonempty for every $x_0$ if and only if $u$ is convex.} Then for any convex function $u$ on $X$ and any fixed point $x_0 \in X$, there exists $y_0 \in \partial u(x_0)$, satisfying% {$u(x) - u(x_0) \ge \langle x - x_0, y_0\rangle$}, i.e., 
 \begin{equation}\label{convex_function}
-u(x) \ge  \langle x , y_0\rangle -\left(\langle x_0, y_0\rangle -  u(x_0)\right),	\text{  for all $x \in X$},
+u(x) \ge  \langle x , y_0\rangle -\left(\langle x_0, y_0\rangle -  u(x_0)\right)	\text{  for all $x \in X$},
 \end{equation} 
-where equality holds at $x = x_0$. On the other hand, if for any $x_0\in X$, there exists $y_0$, such that \eqref{convex_function} holds for all $x\in X$, then $u$ is convex. The following definition is analogous to this property, which is a special case of $G$-convexity, when $G(x,y,z) = \langle x, y \rangle -z$.
+where equality holds at $x = x_0$. On the other hand, if for any $x_0\in X$, there exists $y_0$ such that \eqref{convex_function} holds for all $x\in X$, then $u$ is convex. The following definition is analogous to this property, which is a special case of $G$-convexity, when $G(x,y,z) = \langle x, y \rangle -z$.
 
 \begin{definition}[$G$-convexity]
-	A function $u\in C^0(X)$ is called {\it $G$-convex} if for each $x_0 \in X$, there exist $y_0 \in   cl(Y)$, and $z_0 \in  cl(Z)$ such that $u(x_0)=G(x_0, y_0, z_0)$, and $u(x)\ge G(x, y_0, z_0)$, for all $x\in X$.
+	A function $u\in C^0(X)$ is called {\it $G$-convex} if for each $x_0 \in X$, there exist $y_0 \in   cl(Y)$ and $z_0 \in  cl(Z)$ such that $u(x_0)=G(x_0, y_0, z_0)$ and $u(x)\ge G(x, y_0, z_0)$ for all $x\in X$.
 \end{definition}
 
 
@@ -315,9 +331,9 @@ Similarly, one can also generalize the definition of subdifferential from \eqref
 \begin{definition}[$G$-subdifferentiability]
 	The $G$-subdifferential of a 
 	%$G$-convex % 
-	function $u: X \longrightarrow \R$ is a point-to-set mapping defined by
+	function $u: X \rightarrow \R$ is a point-to-set mapping defined by
 	\begin{equation*}
-	\partial^G u(x):= \left\{ y\in  cl(Y)| H(x,y,u(x)) \text{ is defined and }u(x')\ge G(x',y, H(x,y,u(x))) \text{ for all } x'\in X \right\}.
+	\partial^G u(x):= \left\{ y\in  cl(Y)|~ H(x,y,u(x)) \text{ is defined and }u(x')\ge G(x',y, H(x,y,u(x))) \text{ for all } x'\in X \right\}.
 	\end{equation*}
 	
 	A function $u$ is said to be {\it $G$-subdifferentiable} at $x$ if and only if $\partial^G u(x) \neq \emptyset$.\footnote{In Trudinger \cite{Trudinger14}, this point-to-set mapping $\partial^G u$ is also called $G$-$normal$ mapping; see this paper for more properties related to $G$-convexity.}
@@ -332,7 +348,7 @@ In particular, if $G(x,y,z) = \langle x, y \rangle - z$, then the $G$-subdiffere
 As mentioned above, a well-known result in convex analysis is that a function is convex if and only if it is subdifferentiable everywhere. The following lemma adapts this to $G$-convexity. 
 
 \begin{lemma}\label{convex-subdiff}
-	Given Assumption \ref{assmp:Gdecreasing}, a function $u: X \longrightarrow \R$ is $G$-convex if and only if it is $G$-subdifferentiable everywhere.
+	Given Assumption \ref{assmp:Gdecreasing}, a function $u: X \rightarrow \R$ is $G$-convex if and only if it is $G$-subdifferentiable everywhere.
 \end{lemma}
 
 Using Lemma \ref{convex-subdiff}, one can show the following result,  %Proposition \ref{incen/convex} 
@@ -347,12 +363,12 @@ Using Lemma \ref{convex-subdiff}, one can show the following result,  %Propositi
 \subsection{Implementability}\label{subsection:implementability}
 {We introduce implementability here, which is closely related to incentive-compatibility and can also be exhibited by $G$-convexity and $G$-subdifferential. %Note that in the following statements, no assumptions of single-crossing type are required.
 	
-	\begin{definition}[implementability]
-		A function $y: X \longrightarrow cl(Y)$ is called \textit{implementable} if and only if there exists a function $z: X \longrightarrow \R$  such that the pair $(y, z)$ is incentive compatible.
+	\begin{definition}[Implementability]
+		A function $y: X \rightarrow cl(Y)$ is called \textit{implementable} if and only if there exists a function $z: X \rightarrow \R$  such that the pair $(y, z)$ is incentive compatible.
 	\end{definition}
 	
 	\begin{remark}\label{rmk:implementability}
-		Allowing Assumption \ref{assmp:Gdecreasing}, a function $y$ is implementable if and only if there exists a price menu $p: cl(Y) \longrightarrow \R$ such that the pair $(y, p(y))$ is incentive compatible.
+		Allowing Assumption \ref{assmp:Gdecreasing}, a function $y$ is implementable if and only if there exists a price menu $p: cl(Y) \rightarrow \R$ such that the pair $(y, p(y))$ is incentive compatible.
 	\end{remark}
 	
 	
@@ -360,7 +376,7 @@ Using Lemma \ref{convex-subdiff}, one can show the following result,  %Propositi
 	
 	
 	\begin{corollary}[$G$-convex utilities characterize implementability]\label{cor:implementable}
-		Given Assumption \ref{assmp:Gdecreasing}, a function $y: X \longrightarrow cl(Y)$ is implementable if and only if there exists a $G$-convex function $u(\cdot)$ such that $y(x) \in \partial^G u(x)$ for each $x\in X$.
+		Given Assumption \ref{assmp:Gdecreasing}, a function $y: X \rightarrow cl(Y)$ is implementable if and only if there exists a $G$-convex function $u(\cdot)$ such that $y(x) \in \partial^G u(x)$ for each $x\in X$.
 	\end{corollary}
 }
 
@@ -379,8 +395,9 @@ Combining this with Lemma \ref{incen/convex}, the incentive-compatibility constr
 	(P)
 	\begin{cases}
 	\sup \tilde{\Pi}(u,y):=\int_{X} \pi(x, y(x), H(x,y(x), u(x))) d\mu(x)\\
-	s.t.\ $u$ \text{ is } $G$\text{-convex };\\
-	s.t.\ y(x) \in \partial^G u(x) \text{ and }u(x)\ge u_{\emptyset}(x) \text{ for all } x \in X.
+	s.t.\\
+	 $u$ \text{ is } $G$\text{-convex };\\
+	 y(x) \in \partial^G u(x) \text{ and }u(x)\ge u_{\emptyset}(x) \text{ for all } x \in X.
 	\end{cases}
 	\end{equation}
 \end{proposition}
@@ -389,7 +406,7 @@ Combining this with Lemma \ref{incen/convex}, the incentive-compatibility constr
 
 
 \subsection{Other Assumptions}\label{subsection:assumptions}
-In the next section, we will show the existence result of the rewritten monopolist's problem $(P)$ given in \eqref{Principal_new_problem}. For preparation of the main result, we introduce the following assumptions. Note that, even in the one-dimensional case, we assume no single-crossing type condition. We also include two propositions here, which will be employed in the proofs of Proposition \ref{proposition:convergence} and the existence theorem. \medskip%, i.e. continuous differentiable functions.} \medskip
+In the next section, we will show the existence result of the rewritten monopolist's problem $(P)$ given in \eqref{Principal_new_problem}. For the preparation of the main result, we introduce the following assumptions. Note that, even in the one-dimensional case, we assume no single-crossing type condition. We also include two propositions here, which will be employed in the proofs of Proposition \ref{proposition:convergence} and the existence theorem. \medskip%, i.e. continuous differentiable functions.} \medskip
 
 
 %We adopt technical hypotheses, following from Carlier (Assumptions {assmp:Gcoordinate-monotone}-\ref{assmp:Gtech3}) and Trudinger (Assumptions \ref{assmp:Gregular} - \ref{assmp:Gdecreasing}) as below:\medskip
@@ -402,11 +419,11 @@ In the next section, we will show the existence result of the rewritten monopoli
 
 
 \begin{assumption}\label{assmp:Gcoordinate-monotone}
-	$G$ is coordinate-monotone in $x$. That is, for each $(y,z)\in cl(Y\times Z)$, and for all $ (\alpha, \beta) \in X^2$, if $\alpha_i\ge \beta_i$ for all $ i=1,2,...,M$, then $G(\alpha,y,z)\ge G(\beta, y,z)$.
+	$G$ is coordinate-monotone in $x$. That is, for each $(y,z)\in cl(Y\times Z)$ and all $ (\alpha, \beta) \in X^2$, if $\alpha_i\ge \beta_i$ for all $ i=1,2,...,M$, then $G(\alpha,y,z)\ge G(\beta, y,z)$.
 \end{assumption}
 
 
-In Assumption \ref{assmp:Gcoordinate-monotone}, we assume that agent utility increases along each consumer attribute coordinate. Given coordinate monotonicity of $G$ in the first variable, one can show that all the $G$-convex functions are nondecreasing. Therefore, the value functions are also monotonic with respect to the agents' attributes.\medskip
+In Assumption \ref{assmp:Gcoordinate-monotone}, we assume that agent utility increases along each agent attribute coordinate. Given coordinate monotonicity of $G$ in the first variable, one can show that all the $G$-convex functions are nondecreasing. Therefore, the value functions are also monotonic with respect to the agent attributes.\medskip
 
 \begin{proposition}\label{nondecreasing}
 	Given Assumption \ref{assmp:Gcoordinate-monotone}, $G$-convex functions are nondecreasing in coordinates.
@@ -414,30 +431,30 @@ In Assumption \ref{assmp:Gcoordinate-monotone}, we assume that agent utility inc
 
 
 
- {In the following, we use  $D_x G(x,y,z) := \left(\frac{\partial G}{\partial x_1}, \frac{\partial G}{\partial x_2}, \dots, \frac{\partial G}{\partial x_M}\right)(x,y,z)$ to denote derivative with respect to $x$. For any vector in $\R^M$ or $\R^N$, we use $||\cdot||$ and $||\cdot||_{\alpha}$ to denote its Euclidean  $2$-norm and $\alpha$-norm ($\alpha \ge 1$), respectively. For example, for $x\in \R^M$, we have $||x|| = \sqrt{\sum_{i=1}^{M} x_i^2}$ and $||x||_{\alpha} = \left(\sum_{i=1}^{M} |x_i|^{\alpha}\right)^{\frac{1}{\alpha}}$.} {\color{purple} We say a function $f: X \times Y \times Z \longrightarrow \R$ is super-linearly (or linearly) decreasing with respect to the variable $y\in Y$ if and only if $\frac{f(x,y,z)}{||y||} \longrightarrow -\infty ~(\text{or }C(x,z))$ as $||y||\longrightarrow +\infty$, where $C(x,z)$ is a negative variable depending only on $x$ and $z$. We say a function $f: Y\longrightarrow \R$ is super-linear if and only if $\frac{f(y)}{||y||} \longrightarrow +\infty$ as $||y||\longrightarrow +\infty$.}\medskip
+ {In the following, we use  $D_x G(x,y,z) := \left(\frac{\partial G}{\partial x_1}, \frac{\partial G}{\partial x_2}, \dots, \frac{\partial G}{\partial x_M}\right)(x,y,z)$ to denote derivative with respect to $x$. For any vector in $\R^M$ or $\R^N$, we use $\norm{\cdot}$ and $\norm{\cdot}_{\alpha}$ to denote its Euclidean  $2$-norm and $\alpha$-norm ($\alpha \ge 1$), respectively. For example, for $x\in \R^M$, we have $\norm{x} = \sqrt{\sum_{i=1}^{M} x_i^2}$ and $\norm{x}_{\alpha} = \left(\sum_{i=1}^{M} |x_i|^{\alpha}\right)^{\frac{1}{\alpha}}$.} { We say a function $f: X \times Y \times Z \rightarrow \R$ is asymptotically decreasing super-linearly (respectively, linearly) with respect to the variable $y\in Y$ if and only if $\frac{f(x,y,z)}{\norm{y}} \rightarrow -\infty ~(\text{respectively, }C(x,z))$ as $\norm{y}\rightarrow +\infty$, where $C(x,z)$ is a negative variable depending only on $x$ and $z$. We say a function $f: Y\rightarrow \R$ is asymptotically super-linear if and only if $\frac{f(y)}{\norm{y}} \rightarrow +\infty$ as $\norm{y}\rightarrow +\infty$.}\medskip
  
-In Rochet-Chon\'e's model, $H(x,y,u) = x\cdot y -u$ and $\pi(x,y,z) = z-C(y)$, for some super-linear cost function $C$. In this case, $\pi(x,y,H(x,y,u)) = x\cdot y -u -C(y)$. Since $C$ is super-linear and the space $X$ is bounded, it is reasonable to assume the following:\medskip
+In Rochet-Chon\'e's model, $H(x,y,u) = x\cdot y -u$ and $\pi(x,y,z) = z-c(y)$ with a quadratic cost function $c$. In this case, $\pi(x,y,H(x,y,u)) = x\cdot y -u -c(y)$. Since $c$ is asymptotically super-linear and the space $X$ is bounded, it is reasonable to assume the following:\medskip
 
 
 	\begin{assumption}\label{assmp:Gtech0}
-		$\pi(x,y,H(x,y,u))$ is {\color{purple}(super-)linearly decreasing with respect to $y$ and at least linearly decreasing with respect to $u$}. More precisely, there exist $\alpha \ge 1$, $a_1, a_2> 0$ and $b\in \R$, such that $\pi(x,y,H(x,y,u)) \le -a_1 ||y||_{\alpha}^{\alpha} - a_2 u +b$ for all $ (x, y, u)\in \left\{ (x,y, G(x,y,z))| x\in X, y\in cl(Y), z\in \R \right\}$; or equivalently, $\pi(x,y,z) + a_2 G(x,y,z) \le -a_1 ||y||_{\alpha}^{\alpha}  +b$ for all $ (x, y, z)\in X\times cl(Y)\times \R$.
+		$\pi(x,y,H(x,y,u))$ is {asymptotically decreasing (super-)linearly with respect to $y$ and  asymptotically decreasing at least linearly with respect to $u$}. More precisely, there exist $\alpha \ge 1$, $a_1, a_2> 0$, and $b\in \R$ such that $\pi(x,y,H(x,y,u)) \le -a_1 \norm{y}_{\alpha}^{\alpha} - a_2 u +b$ for all $ (x, y, u)\in \left\{ (x,y, G(x,y,z))|~ x\in X, y\in cl(Y), z\in \R \right\}$; or equivalently, $\pi(x,y,z) + a_2 G(x,y,z) \le -a_1 \norm{y}_{\alpha}^{\alpha}  +b$ for all $ (x, y, z)\in X\times cl(Y)\times \R$.
 	\end{assumption}
 	
 	
-	As shown in the alternative formulation, Assumption \ref{assmp:Gtech0} requires the existence of some weighted surplus which is super-linearly decreasing with respect to the product. In the case where $Y$ is bounded, Assumption \ref{assmp:Gtech0} is equivalent to the existence of some weighted surplus bounded from above.   \medskip
+	As shown in the alternative formulation, Assumption \ref{assmp:Gtech0} requires the existence of some weighted surplus which is asymptotically decreasing super-linearly with respect to the product (when $\alpha >1$). In the case where $Y$ is bounded, Assumption \ref{assmp:Gtech0} is equivalent to the existence of some weighted surplus bounded from above.   \medskip
 
 
 
 
 
 
-Assumptions \ref{assmp:Gtech1} - \ref{assmp:Gtech3} are some technical assumptions on $D_xG$, which are automatically satisfied for $X$, $Y$, $Z$ being bounded.\medskip
+Assumptions \ref{assmp:Gtech1} - \ref{assmp:Gtech3} are some technical assumptions on $D_xG$, which are automatically satisfied for $X$, $Y$, and $Z$ being bounded.\medskip
 
 
 \begin{assumption}\label{assmp:Gtech1}
 	{$D_x G(x,y,z)$ is Lipschitz with respect to $x$},
 	uniformly in $(y,z)$, meaning there exists $k\in \R$ such that
-	$||D_xG(x,y,z)-D_x G(x',y,z)||\le k||x-x'||$ %%FOR SOME $k$ AND 
+	$\norm{D_xG(x,y,z)-D_x G(x',y,z)}\le k\norm{x-x'}$ %%FOR SOME $k$ AND 
 	%FOR
 	for all $(x, x',y, z)\in X^2\times cl(Y) \times cl(Z)$.
 \end{assumption}
@@ -445,52 +462,62 @@ Assumptions \ref{assmp:Gtech1} - \ref{assmp:Gtech3} are some technical assumptio
 %---For $G(x,y,z) = \langle x, y \rangle -f(z)$, Assumption \ref{assmp:Gtech1} will be reduced to 
 
 \begin{assumption}\label{assmp:Gtech2}
-	 %$||D_x G(x,y,z)||_{1}$ increases sub-linearly with respect to  $y$. More precisely, t
-	 There exist $ \beta \in (0, \alpha], c>0$, and $ d\in \R$, such that $||D_x G(x,y,z)||_{1}\le c||y||_{\beta}^{\beta} +d$ for all $ (x, y, z)\in X\times cl(Y) \times cl(Z)$.
+	 %$\norm{D_x G(x,y,z)}_{1}$ increases sub-linearly with respect to  $y$. More precisely, t
+	 There exist $ \beta \in (0, \alpha]$, $c>0$, and $ d\in \R$ such that $\norm{D_x G(x,y,z)}_{1}\le c\norm{y}_{\beta}^{\beta} +d$ for all $ (x, y, z)\in X\times cl(Y) \times cl(Z)$.
 \end{assumption}
 
 
 \begin{assumption}\label{assmp:Gtech3}
-	 Coercivity of {$1$-norm} of $(D_xG)$. For all $ s>0$, there exists $r>0$, such that $\sum_{i=1}^{M} |D_{x_i}G(x,y,z)|\ge s$ for all $(x, y, z)\in X\times  cl(Y) \times cl(Z)$, whenever $||y||\ge r$.
+	 Coercivity of {$1$-norm} of $(D_xG)$. For all $ s>0$, there exists $r>0$ such that $\sum_{i=1}^{M} |D_{x_i}G(x,y,z)|\ge s$ for all $(x, y, z)\in X\times  cl(Y) \times cl(Z)$, whenever $\norm{y}\ge r$.
 \end{assumption}
 
 
 
-{Allowing Assumption \ref{assmp:Gcoordinate-monotone}, {the derivatives $D_{x_i}G$ are always nonnegative; therefore,} we no longer need to take absolute values of $D_{x_i}G$ in the inequality of Assumption \ref{assmp:Gtech3}.} And then Assumption~\ref{assmp:Gtech3} says that the marginal utility of agents who select the same product $y$ will increase to infinity as $||y||$ approaches infinity, uniformly for all agents and prices. {For instance, when $M = N$, utility $G(x,y,z) = \sum_{i=1}^{M} x_iy_i^2 -f(y,z) $, with $f \in C^1(Y \times Z)$ strictly increasing with respect to $z$, satisfies Assumption~\ref{assmp:Gtech3}, because $\sum_{i=1}^{M} \left|D_{x_i}G(x,y,z)\right| = \sum_{i=1}^{M} D_{x_i}G(x,y,z) = \sum_{i=1}^{M} y_i^2 \longrightarrow +\infty$ as $||y|| \longrightarrow + \infty$. In addition, with appropriate $\pi$, this $G$ could satisfy all the other assumptions. For instance, if we take $\bar{z} = +\infty$, then profit $\pi(x,y,z) = z - \sum_{i=1}^{M} y_i^4$ and agents' utility $G(x,y,z)= \sum_{i=1}^{M} x_iy_i^2 - z^2 $ together satisfy Assumption \ref{assmp:Gregular} -  \ref{assmp:Pi1}.}\medskip
+{Allowing Assumption \ref{assmp:Gcoordinate-monotone}, {the derivatives $D_{x_i}G$ are always nonnegative; therefore,} we no longer need to take absolute values of $D_{x_i}G$ in the inequality of Assumption \ref{assmp:Gtech3}.} Then Assumption~\ref{assmp:Gtech3} says that the marginal utility of agents who select the same product $y$ will increase to infinity as $\norm{y}$ approaches infinity, uniformly for all agents and prices. {For instance, when $M = N$, utility $G(x,y,z) = \sum_{i=1}^{M} x_iy_i^2 -f(y,z) $, with $f \in C^1(Y \times Z)$ strictly increasing with respect to $z$, satisfies Assumption~\ref{assmp:Gtech3}, because 
+	$$\sum_{i=1}^{M} \left|D_{x_i}G(x,y,z)\right| = \sum_{i=1}^{M} D_{x_i}G(x,y,z) = \sum_{i=1}^{M} y_i^2 \rightarrow +\infty$$ 
+as $\norm{y} \rightarrow + \infty$. In addition, with appropriate $\pi$, this $G$ could satisfy all the other assumptions. For instance, if we take $\bar{z} = +\infty$, then profit $\pi(x,y,z) = z - \sum_{i=1}^{M} y_i^4$ and agents' utility $G(x,y,z)= \sum_{i=1}^{M} x_iy_i^2 - z^2 $ together satisfy Assumption \ref{assmp:Gregular} -  \ref{assmp:Pi1}.}\medskip
 
 
 In general, if $Y$ is bounded, any $G$ in the form of $G(x,y,z) = b(x,y) - f(y,z)$, with $b \in C^1(cl(X\times Y))$ and $f\in C^0(cl(Y \times Z))$, satisfies Assumption~\ref{assmp:Gtech1} - \ref{assmp:Gtech3}. %{Assumption \ref{assmp:Gtech3} is true since on empty set.} 
+This class of separable utility functions for the agent are also considered in Nöldeke-Samuelson \cite{NoldekeSamuelson15p}, where they serve as the prime example for utility functions that are not necessarily quasilinear but yield strong implementability. 
 \medskip
 
 
 Proposition \ref{Subdiff/Bdd} presents that uniform boundedness of the agents' value functions on some compact subset implies uniform boundedness of the corresponding agents' choices of their favorite products. \medskip
 
 \begin{proposition}[{Uniform boundedness of $G$-convex functions on a compact set implies that of $G$-subdifferentials}]\label{Subdiff/Bdd}
-	Given Assumptions \ref{assmp:Gregular}, \ref{assmp:Gdecreasing}, \ref{assmp:Gcoordinate-monotone}, \ref{assmp:Gtech3}, and let $u(\cdot)$ be a $G$-convex function on $X$, $\omega$ be a compact subset of $X$, $\delta>0, R>0$, satisfying $\omega+\delta\overline{B(0,1)}\subset X$ and $|u(x)|\le R$ for all $x\in \omega + \delta \overline{B(0,1)}$ (here, $\overline{B(0,1)}$ denotes the closed unit ball of $\R^M$). Then, there exists $T = T(\omega,\delta, R) > 0$, such that $||y||\le T$ for any $x \in \omega$ and any $y\in \partial^Gu(x)$.
+	Given Assumptions \ref{assmp:Gregular}, \ref{assmp:Gdecreasing}, \ref{assmp:Gcoordinate-monotone}, \ref{assmp:Gtech3}, and let $u(\cdot)$ be a $G$-convex function on $X$, $\omega$ be a compact subset of $X$, $\delta>0, R>0$, satisfying $\omega+\delta\overline{B(0,1)}\subset X$ and $|u(x)|\le R$ for all $x\in \omega + \delta \overline{B(0,1)}$ (here, $\overline{B(0,1)}$ denotes the closed unit ball of $\R^M$). Then, there exists $T = T(\omega,\delta, R) > 0$ such that $\norm{y}\le T$ for any $x \in \omega$ and any $y\in \partial^Gu(x)$.
 \end{proposition}
 
 
 
 
-Assumptions~\ref{assmp:Pi1} states constraints on the continuity of principal's profit function $\pi$, integrability of participation constraint $u_{\emptyset}$, and absolute continuity of the measure $\mu$ with respect to the Lebesgue measure. 
+Assumptions~\ref{assmp:Pi1} states constraints on continuity of the principal's profit function $\pi$, integrability of participation constraint $u_{\emptyset}$. From now on, we assume $\mu$ to be equivalent to the Lebesgue measure. One might seek to extend the corresponding results to more general settings, e.g., assuming $\mu$ to be absolutely continuous with respect to the Lebesgue measure.
 
-%In Assumption , we assume principal's profit would increase as the selling price increases, for any fixed agent and product type. We also assume that profit will be limited for any fixed selling price, uniformly on agent-product type. \medskip
+%In Assumption , we assume the principal's profit would increase as the selling price increases, for any fixed agent and product type. We also assume that profit will be limited for any fixed selling price, uniformly on agent-product type. \medskip
 
 \begin{assumption}\label{assmp:Pi1}
-	The profit function $\pi$ is continuous on $cl(X\times Y\times Z)$. The participation constraint $u_{\emptyset}$ is integrable with respect to $d \mu$, where the measure $d \mu$ is equivalent to the Lebesgue measure restricted on $X$.%, where the measure $\mu$ is absolutely continuous with respect to the Lebesgue measure and has $X$ as its support.
+	The profit function $\pi$ is continuous on $cl(X\times Y\times Z)$. The participation constraint $u_{\emptyset}$ is integrable with respect to $d \mu$, where the measure  $\mu$ is equivalent to the Lebesgue measure restricted on $X$.%, where the measure $\mu$ is absolutely continuous with respect to the Lebesgue measure and has $X$ as its support.
 \end{assumption}
 
 
 
 %%\begin{assumption}\label{assmp:Pi2}
-%%	The summation of principal's profits and agents' utilities is uniformly bounded. %Uniform boundedness for the summation of principal's profits and agents' utilities. 
+%%	The summation of the principal's profits and agents' utilities is uniformly bounded. %Uniform boundedness for the summation of the principal's profits and agents' utilities. 
 %%	There exists a constant $C_0$, such that $\pi(x, y,z) + G(x,y,z) \le C_0$, for all $(x, y, z) \in X \times  cl(Y) \times cl(Z)$.
 %%\end{assumption}
 %%
-%%In Assumption \ref{assmp:Pi2}, we assume that if an agent $x$ purchases product $y$ at price $z$, then his utility plus principal's benefit will be less than some large number. Otherwise, there will be a sequence of agent-product-price triplets $\{ (x_n, y_n, z_n)\}$, such that the summation approaches infinity as $n$ goes to infinity.\medskip
+%%In Assumption \ref{assmp:Pi2}, we assume that if an agent $x$ purchases product $y$ at price $z$, then his utility plus the principal's benefit will be less than some large number. Otherwise, there will be a sequence of agent-product-price triplets $\{ (x_n, y_n, z_n)\}$, such that the summation approaches infinity as $n$ goes to infinity.\medskip
 
 
-For $\alpha \ge 1$, denote $L^{\alpha}(X)$ as the space of functions for which the $\alpha$-th power of the absolute value is Lebesgue integrable {with respect to the measure $d \mu$}. That is, a function $f: X\longrightarrow \R$ is in $L^{\alpha}(X)$ if and only if $\int_{X} |f|^{\alpha} d\mu <+\infty$. For instance, Assumption \ref{assmp:Pi1} implies $u_{\emptyset}\in L^{1}(X)$.\medskip
+For $\alpha \ge 1$, denote $L^{\alpha}(X)$ as the space of measurable functions for which the $\alpha$-th power of the absolute value is Lebesgue integrable on $X$. That is, a function $f: X\rightarrow \R$ is in $L^{\alpha}(X)$ if and only if 
+$$\norm{f}_{L^{\alpha}(X)}:= \left(\int_{X} |f(x)|^{\alpha} dx \right)^{\frac{1}{\alpha}} <+\infty,$$
+where $\norm{f}_{L^{\alpha}(X)}$ is the associated $L^{\alpha}$ norm of $f$ on $X$.  
+For instance, Assumption \ref{assmp:Pi1} implies $u_{\emptyset}\in L^{1}(X)$.  For any function $f$ on $X$, its {\em essential supremum} is defined as:
+	\begin{equation}
+		\norm{f}_{L^{\infty}(X)} := \inf\{C\ge 0: |f(x)| \le C \text{ for Lebesgue almost every } x \in X \}.
+	\end{equation}
+Denote by $L^{\infty}(X)$ the space of measurable functions on $X$ whose essential supremum is finite. Also, denote by $L_{loc}^{\infty}(X)$ the space of measurable functions on $X$ which belong to $L^{\infty}(K)$ for all compact subsets $K$ of $X$. \medskip
 
 
 %{\bf Assumption 10.} Profit function $\pi(x,y,z)$ is strictly increasing with respect to the third variable $z$, for each $(x,y)\in X\times Y$.\medskip
@@ -521,7 +548,7 @@ For $\alpha \ge 1$, denote $L^{\alpha}(X)$ as the space of functions for which t
 
 
 \section{Main result}\label{section:mainresult}
-In this section, we state the existence theorem, the proof of which is provided in the Section \ref{section:proofs}. 
+In this section, we state the existence theorem, the proof of which is provided in Section \ref{section:proofs}. 
 
 
 \begin{theorem}[Existence]\label{maintheorem}
@@ -532,18 +559,24 @@ In this section, we state the existence theorem, the proof of which is provided 
 Technically, in order to demonstrate existence, we start from a sequence of value-product pairs, whose total profits have a limit that is equal to the supremum of $(P)$.
 Then we need to show that this sequence converges, up to a subsequence, to a pair of limit mappings. Then we show this limit value-product pair satisfies the constraints of $(P)$, and its corresponding total payoff is no worse than those of any other admissible pairs. \medskip
 
-Suppose $Y$ is bounded, then Assumption \ref{assmp:Gtech0} - \ref{assmp:Gtech3} could be simplified and Proposition \ref{Subdiff/Bdd} holds automatically. Besides, some steps in the proof of the main theorem would be simplified. If, in addition, both $Y$ and $Z$ are bounded, Assumption \ref{assmp:Gtech0} - \ref{assmp:Gtech3} are automatically satisfied.%{\color{} Assumption\ref{assmp:Gtech3} is not needed, `satisfied' in the sense of on emptyset.} 
+Suppose the space of products $Y$ is bounded, then Assumption \ref{assmp:Gtech0} - \ref{assmp:Gtech3} could be simplified, and Proposition \ref{Subdiff/Bdd} holds automatically. Besides, some steps in the proof of the main theorem would be simplified. If, in addition, both spaces $Y$ and $Z$ are bounded, Assumption \ref{assmp:Gtech0} - \ref{assmp:Gtech3} are automatically satisfied and the proofs will be much simpler.%{\color{} Assumption\ref{assmp:Gtech3} is not needed, `satisfied' in the sense of on emptyset.} 
 \medskip
 
-In the following, we denote by $W^{1,1}(X)$  the Sobolev space of $L^1$ functions whose first derivatives exist in the weak sense and belong to $L^1(X)$. For more properties of Sobolev spaces and weak derivatives, see Evans~\cite[Chapter 5]{Evans98}. If $\omega$ is some open subset of $X$, the notation $\omega \subset \subset X$ means that the closure of $\omega$ is also included in $X$.\medskip
+
+In the following, we denote by $W^{1,1}(X)$  the Sobolev space of $L^1$ functions whose first derivatives exist in the weak sense and belong to $L^1(X)$. 
+	For any function $f: X \rightarrow \R$, define its $W^{1,1}(X)$ norm as 
+	\begin{equation*}
+		\norm{f}_{W^{1,1}(X)} = \norm{f}_{L^1(X)} + \sum_{i=1}^{M}\norm{D_{x_i}f}_{L^1(X)}.
+	\end{equation*}
+For more properties of Sobolev spaces and weak derivatives, see Evans~\cite[Chapter 5]{Evans98}. If $\omega$ is some open subset of $X$, the notation $\omega \subset \subset X$ means that the closure of $\omega$ is also included in $X$.\medskip
 
 Lemma \ref{lemma1} provides convergence results for sequences of convex functions, which are uniformly bounded in Sobolev spaces on open convex subsets. We state this classical result without proof, which can be found in Carlier \cite{Carlier01}.\medskip
 
 
 \begin{lemma}\label{lemma1}
-	Let $\{u_n\}_{n\in \N}$ be a sequence of convex functions on $X$ such that, for every open convex set $\omega \subset \subset X$, the following holds:
+	Let $\{u_n\}_{n\in \N}$ be a sequence of convex functions on $X$ such that for every open convex set $\omega \subset \subset X$, the following holds:
 	\begin{equation*}
-	\sup\limits_{n} ||u_n||_{W^{1,1}(\omega)} < +\infty.
+	\sup\limits_{n} \norm{u_n}_{W^{1,1}(\omega)} < +\infty.
 	\end{equation*}
 	Then there exists a function $u^*$ %.. $\bar{u}$ means indifference curve / specific utility level} 
 	which is convex in $X$, a measurable subset $A$ of $X$ and a subsequence again labeled $\{u_n\}_{n\in \N}$ such that\\
@@ -556,7 +589,7 @@ Lemma \ref{lemma1} provides convergence results for sequences of convex function
 \begin{proposition}\label{proposition:convergence}
 	Assume Assumptions \ref{assmp:Gregular}, \ref{assmp:Gdecreasing}, \ref{assmp:Gcoordinate-monotone}, \ref{assmp:Gtech1}, \ref{assmp:Gtech3}, and let $\{u_n\}_{n\in \N}$ be a sequence of $G$-convex functions on $X$ such that for every open convex set $\omega \subset \subset X$, the following holds:
 	\begin{equation*}
-	\sup\limits_{n} ||u_n||_{W^{1,1}(\omega )} < +\infty.
+	\sup\limits_{n} \norm{u_n}_{W^{1,1}(\omega )} < +\infty.
 	\end{equation*}
 	Then there exists a function $u^*$ which is  $G$-convex in $X$, a measurable subset $A$ of $X$, and a subsequence again labeled $\{u_n\}_{n\in \N}$ such that\\
 	1. $\{u_n\}_{n\in \N}$ converges to $u^*$ uniformly on compact subsets of $X$;\\
@@ -575,7 +608,7 @@ In the proof of Proposition \ref{proposition:convergence}, we show that the sequ
 
 \section{Future Work}\label{section:futurework}
 
-We have strong interest in giving an explicit solution for the non-quasilinear example on the real line and in high dimension. We also would like to investigate, among other things, the conditions under which the matching map $y: X \longrightarrow cl(Y)$ is continuous and/or differentiable. Given the technical arguments employed in this paper, it may be very fruitful to study possible generalizations of other known results for convex functions to $G$-convex functions.
+We have strong interest in giving an explicit solution for the non-quasilinear example on the real line and in high dimension. We also would like to investigate, among other things, the conditions under which the matching map $y: X \rightarrow cl(Y)$ is continuous and/or differentiable. Given the technical arguments employed in this paper, it may be very fruitful to study possible generalizations of other known results for convex functions to $G$-convex functions.
 
 
 
@@ -587,7 +620,12 @@ We have strong interest in giving an explicit solution for the non-quasilinear e
 \section{Proofs}\label{section:proofs}
 
 \begin{proof}[Proof of Proposition \ref{lemma_continuity}]
-	(Proof by contradiction). Suppose $H$ is not continuous, then there exists a sequence $\{(x_n, y_n, z_n)\}_{n\in \N} \subset cl(X\times Y \times Z)$ converging to $(x, y, z)$ and $\varepsilon >0$ such that $|H(x_n, y_n, z_n) - H(x,y,z)|>\varepsilon$ for all $n\in \N$. Without loss of generality, we assume $H(x_n, y_n, z_n) - H(x,y,z)>\varepsilon$ for all $n\in \N$. Therefore, we have $H(x_n, y_n, z_n) > H(x,y,z)+\varepsilon$. By Assumption \ref{assmp:Gdecreasing}, this implies $z_n < G(x_n, y_n, H(x,y,z)+\varepsilon)$ for all $n\in \N$. Taking limit $n\longrightarrow \infty$ at both sides, since $G$ is continuous from Assumption \ref{assmp:Gregular}, we have $z \le G(x, y, H(x,y,z)+\varepsilon)$. This implies $H(x,y,z) \ge H(x,y,z)+\varepsilon$, a contradiction.
+	(Proof by contradiction). Suppose $H$ is not continuous, then there exists a sequence $\{(x_n, y_n, z_n)\}_{n\in \N} \subset cl(X\times Y \times Z)$ converging to $(x, y, z)$ and $\varepsilon >0$ such that 
+	$$|H(x_n, y_n, z_n) - H(x,y,z)|>\varepsilon \text{ for all $n\in \N$}.$$ 
+	Without loss of generality, we assume $H(x_n, y_n, z_n) - H(x,y,z)>\varepsilon$ for all $n\in \N$. Therefore, we have $H(x_n, y_n, z_n) > H(x,y,z)+\varepsilon$. By Assumption \ref{assmp:Gdecreasing}, this implies 
+	$$z_n < G(x_n, y_n, H(x,y,z)+\varepsilon) \text{ for all $n\in \N$.}$$ 
+	Taking limit $n\rightarrow \infty$ at both sides, since $G$ is continuous from Assumption \ref{assmp:Gregular}, we have 
+	$$z \le G(x, y, H(x,y,z)+\varepsilon).$$ This implies $H(x,y,z) \ge H(x,y,z)+\varepsilon$, a contradiction.
 \end{proof}
 
 \vspace{0.3cm}
@@ -607,31 +645,39 @@ We have strong interest in giving an explicit solution for the non-quasilinear e
 
 	Assume $u$ is $G$-convex, we want to show that $u$ is $G$-subdifferentiable everywhere, i.e., we need to prove  $\partial^G u(x_0)\neq \emptyset$ for all $x_0\in X$.
 	
-	Since $u$ is $G$-convex, by definition, for each $x_0$, there exists $ y_0, z_0$, such that $u(x_0) = G(x_0,y_0,z_0)$, and for all  $ x \in X$, 
+	Since $u$ is $G$-convex, by definition, for each $x_0$, there exists $ y_0, z_0$ such that $u(x_0) = G(x_0,y_0,z_0)$ and
 	\begin{equation*}
-	u(x)\ge G(x, y_0, z_0) = G(x, y_0, H(x_0,y_0,u(x_0))).
+	u(x)\ge G(x, y_0, z_0) = G(x, y_0, H(x_0,y_0,u(x_0))) \text{  for all  $ x \in X$}.
 	\end{equation*}
-	By the definition of $G$-subdifferentiability, $y_0 \in \partial^G u(x_0)$, i.e. $\partial^G u(x_0) \neq \emptyset$.
+	By the definition of $G$-subdifferentiability, $y_0 \in \partial^G u(x_0)$, i.e., $\partial^G u(x_0) \neq \emptyset$.
 	
 	On the other hand, assume $u$ is $G$-subdifferentiable everywhere, then for each $ x_0 \in X$,  there exists $ y_0 \in \partial^G u(x_0)$. Set $z_0:=H(x_0,y_0,u(x_0))$ so that $u(x_0) = G(x_0, y_0, z_0)$.
 	
-	Since $y_0\in \partial^G u(x_0)$, for all $x\in X$, we have 
+	Since $y_0\in \partial^G u(x_0)$, we have 
 	\begin{equation*}
-	u(x)\ge G(x,y_0,H(x_0,y_0,u(x_0))) = G(x,y_0,z_0).
+	u(x)\ge G(x,y_0,H(x_0,y_0,u(x_0))) = G(x,y_0,z_0) \text{  for all $x\in X$ }.
 	\end{equation*}
 	By definition, $u$ is $G$-convex.
 \end{proof}
 \vspace{0.3cm}
 \begin{proof}[Proof of Lemma \ref{incen/convex}]
-$``\Rightarrow"$. Suppose $(y,z)$ is incentive compatible. For any fixed $x_0 \in X$, let $y_0 = y(x_0)$ and $z_0 = z(x_0)$. Then $u(x_0) = G(x_0, y(x_0), z(x_0)) = G(x_0, y_0, z_0)$. By incentive compatibility of the contract $(y,z)$, for any $x\in X$, one has $G(x, y(x), z(x)) \ge G(x, y(x_0), z(x_0))$. This implies $u(x) \ge G(x,y_0,z_0)$, for any $x\in X$, since $u(x)= G(x, y(x), z(x))$,  $y_0 = y(x_0)$ and $z_0 = z(x_0)$. By definition, $u$ is $G$-convex. 
+$``\Rightarrow"$. Suppose $(y,z)$ is incentive compatible. For any fixed $x_0 \in X$, let $y_0 = y(x_0)$ and $z_0 = z(x_0)$. Then 
+$$u(x_0) = G(x_0, y(x_0), z(x_0)) = G(x_0, y_0, z_0).$$ 
+By incentive compatibility of the contract $(y,z)$, one has 
+$$G(x, y(x), z(x)) \ge G(x, y(x_0), z(x_0)) \text{ for any $x\in X$.}$$ This implies $u(x) \ge G(x,y_0,z_0)$ for any $x\in X$, because $u(x)= G(x, y(x), z(x))$,  $y_0 = y(x_0)$, and $z_0 = z(x_0)$. By definition, $u$ is $G$-convex. 
 
-Since $u(x_0)=G(x_0, y_0, z_0)$, by definition of function $H$, one has $z_0 = H(x_0, y_0, u(x_0))$.  Combining with $u(x) \ge G(x, y_0, z_0)$,  for any $x\in X$, which is concluded from above, we have $u(x)\ge G(x, y_0, H(x_0, y_0, u(x_0)))$, for any $x\in X$. By definition of  $G$-subdifferentiability, one has $y_0 \in \partial^G u(x_0)$, and thus $y(x_0) = y_0 \in \partial^G u(x_0)$.
+Since $u(x_0)=G(x_0, y_0, z_0)$, by definition of function $H$ one has $z_0 = H(x_0, y_0, u(x_0))$.  Combining with $u(x) \ge G(x, y_0, z_0)$ for any $x\in X$, which is concluded from above, we have 
+$$u(x)\ge G(x, y_0, H(x_0, y_0, u(x_0))) \text{ for any $x\in X$.}$$ 
+By definition of  $G$-subdifferentiability, one has $y_0 \in \partial^G u(x_0)$. Therefore, $y(x_0) = y_0 \in \partial^G u(x_0)$.
 
-$``\Leftarrow"$. Assume that $u = G(x, y(x),z(x))$ is $G$-convex, and $y(x)\in \partial^G u(x)$, for any $x\in X$. For any fixed $x \in X$, since $y(x)\in \partial^G u(x)$, for any $x'\in X$, one has 
+$``\Leftarrow"$. Assume that $u = G(x, y(x),z(x))$ is $G$-convex and $y(x)\in \partial^G u(x)$ for any $x\in X$. For any fixed $x \in X$, since $y(x)\in \partial^G u(x)$, one has 
 \begin{equation}\label{eqn_prop3.4}
-	u(x')\ge G(x', y(x), H(x, y(x), u(x))).
+	u(x')\ge G(x', y(x), H(x, y(x), u(x))) \text{ for any $x'\in X$.}
 \end{equation} 
-Since $u(x) = G(x, y(x),z(x))$, by definition of function $H$, one has $z(x) = H(x,y(x), u(x))$. Combining with the inequality \eqref{eqn_prop3.4}, we have $u(x')\ge G(x', y(x), z(x))$. Noticing $u(x') = G(x',y(x'),$ $z(x')) $, one has $G(x',y(x'),z(x')) = u(x') \ge G(x', y(x), z(x))$.
+ 
+
+Since $u(x) = G(x, y(x),z(x))$, by definition of function $H$, one has $z(x) = H(x,y(x), u(x))$. Combined with the inequality \eqref{eqn_prop3.4}, we have $$u(x')\ge G(x', y(x), z(x)) \text{ for any $x'\in X$.}$$ Notice $u(x') = G(x',y(x'),$ $z(x')) $. Thus, 
+$$G(x',y(x'),z(x')) = u(x') \ge G(x', y(x), z(x)) \text{ for any $x, x'\in X$.}$$
 By definition, $(y,z)$ is incentive compatible.
 \end{proof}
 
@@ -640,9 +686,10 @@ By definition, $(y,z)$ is incentive compatible.
 \begin{proof}[Proof of Remark \ref{rmk:implementability}]
 	One direction is easier: given $p$ and $y$, define $z(\cdot):= p(y(\cdot))$. Then the conclusion follows directly. \medskip
 	
-	Given an incentive-compatible pair $(y, z): X \longrightarrow cl(Y) \times \R$, we need to construct a price menu $p: cl(Y)\longrightarrow \R$. If $y= y(x)$ for some $x\in X$, define $p(y):= z(x)$; for any other $y \in cl(Y)$, define $p(y) := \bar{z}$. \medskip
+	Given an incentive-compatible pair $(y, z): X \rightarrow cl(Y) \times \R$, we need to construct a price menu $p: cl(Y)\rightarrow \R$. If $y= y(x)$ for some $x\in X$, define $p(y):= z(x)$; for any other $y \in cl(Y)$, define $p(y) := \bar{z}$. \medskip
 	
-	We first show $p$ is well-defined. Suppose $y(x) = y(x')$ with $x\ne x'$, from incentive compatibility of $(p,y)$, we have $G(x,y(x), z(x)) \ge G(x, y(x'), z(x')) = G(x, y(x), z(x'))$. Since $G$ is strictly decreasing with respect to its third variable, the above inequality implies $z(x) \le z(x')$. Similarly, one has $z(x) \ge z(x')$. Therefore, $z(x) = z(x')$ and thus $p$ is well-defined. \medskip
+	We first show $p$ is well-defined. Suppose $y(x) = y(x')$ with $x\ne x'$, from incentive compatibility of $(p,y)$, we have 
+	$$G(x,y(x), z(x)) \ge G(x, y(x'), z(x')) = G(x, y(x), z(x')).$$ Since $G$ is strictly decreasing with respect to its third variable, the above inequality implies $z(x) \le z(x')$. Similarly, one has $z(x) \ge z(x')$. Therefore, $z(x) = z(x')$ and thus $p$ is well-defined. \medskip
 	
 	The incentive compatibility of $(y, p(y))$ follows from that of $(y, z)$ and definition of $p$.
 \end{proof}
@@ -657,12 +704,28 @@ By definition, $(y,z)$ is incentive compatible.
 
 \begin{proof} [Proof of Proposition \ref{equiv_form}] We need to prove both directions for equivalence of $(P_0)$ and $(P)$.\medskip
 	
-	1. For any incentive-compatible pair $(y, p(y))$, define $u(\cdot) := G(\cdot,y(\cdot), p(y(\cdot)))$. Then by Lemma \ref{incen/convex}, we have $u(\cdot)$ is $G$-convex and $y(x) \in \partial^G u(x)$ for all $x \in X$. From the participation constraint, $G(x, y(x), p(y(x))) \ge u_{\emptyset}(x)$ for all $x\in X$. This implies $u(x)\ge u_{\emptyset}(x)$ for all $x\in X$. Besides, two integrands are equal: $\pi(x, y(x), p(y(x))) = \pi(x,y(x), H(x,y(x), u(x)))$. Therefore, $(P_0) \le (P)$.\medskip
+	1. For any incentive-compatible pair $(y, p(y))$, define $u(\cdot) := G(\cdot,y(\cdot), p(y(\cdot)))$. Then by Lemma \ref{incen/convex}, we have $u(\cdot)$ is $G$-convex and $y(x) \in \partial^G u(x)$ for all $x \in X$. From the participation constraint, 
+	$$G(x, y(x), p(y(x))) \ge u_{\emptyset}(x) \text{ for all $x\in X$. }$$
+	This implies $u(x)\ge u_{\emptyset}(x)$ for all $x\in X$. Besides, two integrands are equal: $\pi(x, y(x), p(y(x))) = \pi(x,y(x), H(x,y(x), u(x)))$. Therefore, $(P_0) \le (P)$.\medskip
 	
-	2. On the other hand, assume $u(\cdot)$ is $G$-convex, $y(x)\in \partial^G u(x)$ and $u(x) \ge u_{\emptyset}(x)$ for all $x \in X$. From Corollary \ref{cor:implementable} and Remark \ref{rmk:implementability}, we know $y$ is implementable and there exists a price menu $p: cl(Y) \longrightarrow \R$, such that the pair $(y, p(y))$ is incentive compatible, where $p(y) = H(x,y(x), u(x))$ for $y = y(x) \in y(X) :=\{ y(x) \in cl(Y) | x \in X \}$; $p(y) = \bar{z}$ for other $y\in cl(Y)$. Firstly, the mapping $p$ is well-defined, using the same argument as that in Remark \ref{rmk:implementability}. %Then by Lemma \ref{incen/convex}, $(y, p(y))$ is incentive compatible. 
-	Secondly, the participation constraint holds since $G(x,y(x), p(y(x))) = u(x) \ge u_{\emptyset}(x)$ for all $x\in X$. \medskip
+	2. On the other hand, assume $u(\cdot)$ is $G$-convex, $y(x)\in \partial^G u(x)$ and $u(x) \ge u_{\emptyset}(x)$ for all $x \in X$. From Corollary \ref{cor:implementable} and Remark \ref{rmk:implementability}, we know $y$ is implementable and there exists a price menu $p: cl(Y) \rightarrow \R$ such that the pair $(y, p(y))$ is incentive compatible, where
+	\begin{equation*}
+		p(y) =
+		\begin{cases}
+			H(x,y(x), u(x)) & \text{ if } y = y(x) \in y(X) :=\{ y(x) \in cl(Y) |~ x \in X \};\\
+			\bar{z} & \text{ otherwise}.\\
+		\end{cases}
+	\end{equation*}
 	
-	Thirdly, let us show this price menu $p$ is lower semicontinuous. Let $\tilde{p}$ be the restriction of $p$ to $y(X)$. Suppose that $\{y_n\}_{n\in \N} \subset y(X)$ converges $y_0 \in y(X)$ with $y_n = y(x_n)$ and $y_0 = y(x_0)$, satisfying $\lim\limits_{n \rightarrow \infty} \tilde{p}(y_n) = \liminf\limits_{y \rightarrow y_{0}} \tilde{p}(y)$.  Let $z_n:= \tilde{p}(y_n)$ and $z_{\infty}:=\lim\limits_{n \rightarrow \infty} z_n$. To prove lower semicontinuity of $\tilde{p}$, we need to show $\tilde{p}(y_0)\le z_{\infty}$.  Since $y_n \in \partial^G u(x_n)$, we have $u(x) \ge G(x,y_n, H(x_n, y_n, u(x_n))) = G(x, y_n, z_n)$. Taking $n\longrightarrow \infty$, we have $u(x)\ge G(x, y_0, z_{\infty})$. This implies $G(x_0, y_0, \tilde{p}(y_0)) = u(x_0) \ge G(x_0, y_0, z_{\infty})$. By Assumption \ref{assmp:Gdecreasing}, we know $\tilde{p}(y_0) \le z_{\infty}$. Thus $\tilde{p}$ is lower semicontinuous. Since $p$ is an extension of $\tilde{p}$ from $y(X)$ to $cl(Y)$ as its lower semicontinuous hull, satisfying $v(y)= \bar{z}$ for all $y\in cl(Y)\setminus y(X)$, we know $p$ is also lower semicontinuous.
+	Firstly, the mapping $p$ is well-defined, using the same argument as that in Remark \ref{rmk:implementability}. %Then by Lemma \ref{incen/convex}, $(y, p(y))$ is incentive compatible. 
+	
+	Secondly, the participation constraint holds since 
+	$$G(x,y(x), p(y(x))) = u(x) \ge u_{\emptyset}(x) \text{ for all $x\in X$.}$$ 
+
+	
+	Thirdly, let us show this price menu $p$ is lower semicontinuous. Let $\tilde{p}$ be the restriction of $p$ to $y(X)$. Suppose that $\{y_n\}_{n\in \N} \subset y(X)$ converges $y_0 \in y(X)$ with $y_n = y(x_n)$ and $y_0 = y(x_0)$, satisfying $$\lim\limits_{n \rightarrow \infty} \tilde{p}(y_n) = \liminf\limits_{y \rightarrow y_{0}} \tilde{p}(y).$$  
+	Let $z_n:= \tilde{p}(y_n)$ and $z_{\infty}:=\lim\limits_{n \rightarrow \infty} z_n$. To prove lower semicontinuity of $\tilde{p}$, we need to show $\tilde{p}(y_0)\le z_{\infty}$.  Since $y_n \in \partial^G u(x_n)$, we have $$u(x) \ge G(x,y_n, H(x_n, y_n, u(x_n))) = G(x, y_n, z_n).$$ Taking $n\rightarrow \infty$, this implies $u(x)\ge G(x, y_0, z_{\infty})$. Therefore, 
+	$$G(x_0, y_0, \tilde{p}(y_0)) = u(x_0) \ge G(x_0, y_0, z_{\infty}).$$ By Assumption \ref{assmp:Gdecreasing}, we know $\tilde{p}(y_0) \le z_{\infty}$. Thus $\tilde{p}$ is lower semicontinuous. Since $p$ is an extension of $\tilde{p}$ from $y(X)$ to $cl(Y)$ as its lower semicontinuous hull, satisfying $v(y)= \bar{z}$ for all $y\in cl(Y)\setminus y(X)$, we know $p$ is also lower semicontinuous.
 	\medskip
 	
 	Lastly, two integrands are equal: $\pi(x, y(x), p(y(x))) = \pi(x,y(x), H(x,y(x), u(x)))$. Therefore, $(P_0) \ge (P)$.
@@ -673,7 +736,10 @@ By definition, $(y,z)$ is incentive compatible.
 
 
 \begin{proof}[Proof of Proposition \ref{nondecreasing}]
-	Let $u$ be any $G$-convex function, and let $\alpha$, $\beta$ be any two agent types in $X$ with $\alpha \ge \beta$. By $G$-convexity of $u$, for this $\beta$, there exist $y\in cl(Y)$ and $z \in cl(Z)$, such that $u(\beta)=G(\beta, y,z)$ and $u(x)\ge G(x, y,z)$, for any $x\in X$. Since $\alpha \ge \beta$, by Assumption \ref{assmp:Gcoordinate-monotone}, we have $G(\alpha, y,z)\ge G(\beta,y,z)$. Combining with $u(\alpha)\ge G(\alpha, y,z)$ and $u(\beta) = G(\beta,y,z)$, one has $u(\alpha) \ge u(\beta)$. Thus, $u$ is nondecreasing.
+	Let $u$ be any $G$-convex function, and let $\alpha$, $\beta$ be any two agent types in $X$ with $\alpha \ge \beta$. By $G$-convexity of $u$, for this $\beta$, there exist $y\in cl(Y)$ and $z \in cl(Z)$ such that 
+	$$u(\beta)=G(\beta, y,z) \text{ and } u(x)\ge G(x, y,z) \text{ for any $x\in X$.}$$ 
+	
+	Since $\alpha \ge \beta$, by Assumption \ref{assmp:Gcoordinate-monotone}, we have $G(\alpha, y,z)\ge G(\beta,y,z)$. Combining with $u(\alpha)\ge G(\alpha, y,z)$ and $u(\beta) = G(\beta,y,z)$, one has $u(\alpha) \ge u(\beta)$. Thus, $u$ is nondecreasing.
 \end{proof}
 
 \vspace{0.3cm}
@@ -682,31 +748,35 @@ By definition, $(y,z)$ is incentive compatible.
 \begin{proof}[Proof of Proposition \ref{Subdiff/Bdd}]
 	(Proof by contradiction).\medskip
 	
-	By Assumption \ref{assmp:Gcoordinate-monotone} and Assumption \ref{assmp:Gtech3}, for $s=\frac{4R\sqrt{M}}{\delta}$, there exists $r>0$, such that for any $(x, y, z)\in X \times  cl(Y) \times cl(Z)$, whenever $||y||\ge r$, we have $\sum\limits_{i=1}^{M}D_{x_i}G(x,y,z)\ge \frac{4R\sqrt{M}}{\delta}$.\medskip
+	By Assumption \ref{assmp:Gcoordinate-monotone} and Assumption \ref{assmp:Gtech3}, for $s=\frac{4R\sqrt{M}}{\delta}$, there exists $r>0$ such that for any $(x, y, z)\in X \times  cl(Y) \times cl(Z)$, whenever $\norm{y}\ge r$, we have $$\sum\limits_{i=1}^{M}D_{x_i}G(x,y,z)\ge \frac{4R\sqrt{M}}{\delta}.$$
 	
-	Assume the boundedness conclusion of this proposition is not true. Then for this $r$, there exist $ x_0 \in \omega$ and  $ y_0\in \partial^G u(x_0)$, such that $||y_0||\ge r$. Thus,
+	Assume the boundedness conclusion of this proposition is not true. Then for this $r$, there exist $ x_0 \in \omega$ and  $ y_0\in \partial^G u(x_0)$ such that $\norm{y_0}\ge r$. Thus,
 	\begin{equation}\label{eqn_coercivity}
-		\sum\limits_{i=1}^{M}D_{x_i}G(x,y_0,z)\ge \frac{4R\sqrt{M}}{\delta}, \ \ \ \ \ \text{ for all } x \in X, z \in \R.
+		\sum\limits_{i=1}^{M}D_{x_i}G(x,y_0,z)\ge \frac{4R\sqrt{M}}{\delta} \ \ \text{ for all } x \in X \text{ and } z \in \R.
 	\end{equation}
-	Since $y_0 \in \partial^G u(x_0)$, by definition of the $G$-subdifferential, we have $u(x)\ge G(x,y_0,H(x_0,y_0,u(x_0)))$,  for any $ x \in X$. Take $x=x_0+\delta x_{-1}$, where $x_{-1}:=(\frac{1}{\sqrt{M}}, \frac{1}{\sqrt{M}}, \cdots, \frac{1}{\sqrt{M}})$ is a unit vector in $\R^M$ with each coordinate equal to $\frac{1}{\sqrt{M}}$. Then 
+	Since $y_0 \in \partial^G u(x_0)$, by definition of the $G$-subdifferential, we have 
+	$$u(x)\ge G(x,y_0,H(x_0,y_0,u(x_0))) \text{ for any $ x \in X$.}$$ 
+	
+	Take $x=x_0+\delta x_{-1}$, where $x_{-1}:=(\frac{1}{\sqrt{M}}, \frac{1}{\sqrt{M}}, \cdots, \frac{1}{\sqrt{M}})$ is a unit vector in $\R^M$ with each coordinate equal to $\frac{1}{\sqrt{M}}$. Then 
 	\begin{equation}\label{eqn_prop3.6}
 		u(x_0+\delta x_{-1})\ge G(x_0+\delta x_{-1},y_0,H(x_0,y_0,u(x_0))).
 	\end{equation}
-	For any $x \in \omega+ \delta \overline{B(0,1)}$, from conditions in the proposition, we have $||u(x)||\le R$. Therefore, 
+	For any $x \in \omega+ \delta \overline{B(0,1)}$, from conditions in the proposition, we have $|u(x)|\le R$. Therefore, 
 	\begin{flalign*}
 	2R &\ge |u(x_0+\delta x_{-1})|+|u(x_0)|&&\\
 	&\ge |u(x_0+\delta x_{-1})- u(x_0)|&& \text{(By the triangle inequality)}\\
 	&\ge u(x_0+\delta x_{-1}) - u(x_0)&& \\
 	&\ge G(x_0+\delta x_{-1}, y_0, H(x_0,y_0,u(x_0)))&& \text{(By inequality \eqref{eqn_prop3.6})  and (by definition }\\
 	& -G(x_0, y_0, H(x_0, y_0, u(x_0))) && \text{of $H$, $u(x_0) = G(x_0, y_0, H(x_0, y_0, u(x_0)))$}\\
-	&= \int_{0}^{1}\delta \left\langle x_{-1},  D_{x}G(x_0+t\delta x_{-1}, y_0, H(x_0,y_0,u(x_0)))\right\rangle dt&& \text{(By the fundamental theorem of Calculus)}\\
-	&= \frac{\delta}{\sqrt{M}}\int_{0}^{1} \sum\limits_{i=1}^{M}D_{x_i}G(x_0+t\delta x_{-1}, y_0, H(x_0, y_0, u(x_0))) dt&&\\
+	&= \int_{0}^{1}\delta \left\langle x_{-1},  D_{x}G\left(x_0+t\delta x_{-1}, y_0, H(x_0,y_0,u(x_0))\right)\right\rangle dt&& \text{(By the fundamental theorem of Calculus)}\\
+	&= \frac{\delta}{\sqrt{M}}\int_{0}^{1} \sum\limits_{i=1}^{M}D_{x_i}G\left(x_0+t\delta x_{-1}, y_0, H(x_0, y_0, u(x_0))\right) dt&&\\
 	&\ge \frac{\delta}{\sqrt{M}}\int_{0}^{1}\frac{4R\sqrt{M}}{\delta}dt&& \text{(By inequality \eqref{eqn_coercivity})}\\
 	&= \frac{\delta}{\sqrt{M}}\cdot\frac{4R\sqrt{M}}{\delta}&&\\
 	&= 4R,&&
 	\end{flalign*}	
 	{a contradiction.
-		Thus, our assumption is wrong. Therefore, there exists $T>0$, such that for any $x \in \omega$, $y \in \partial^G u(x)$, one has $||y||\le T$. In addition, here $T = T(\omega, \delta, R)$ is independent of $u$. In fact, from the above argument, we can see that $T \le r$, which does not depend on $u$.}
+		%Thus, our assumption is wrong. 
+	Therefore, there exists $T>0$ such that for any $x \in \omega$ and $y \in \partial^G u(x)$, one has $\norm{y}\le T$. In addition, here $T = T(\omega, \delta, R)$ is independent of $u$. In fact, from the above argument we can see that $T \le r$, which does not depend on $u$.}
 \end{proof}
 
 \vspace{0.3cm}
@@ -714,112 +784,138 @@ By definition, $(y,z)$ is incentive compatible.
 
 
 \begin{proof}[Proof of Proposition \ref{proposition:convergence}]
-	In this proof, we will show that the sequence of $G$-convex functions is convergent, under Assumptions  \ref{assmp:Gregular}, \ref{assmp:Gdecreasing}, \ref{assmp:Gcoordinate-monotone}, \ref{assmp:Gtech1}, \ref{assmp:Gtech3}, by applying results from Lemma \ref{lemma1}, then prove that the limit function is also $G$-convex. 
+	In this proof, we will show that, under Assumptions  \ref{assmp:Gregular}, \ref{assmp:Gdecreasing}, \ref{assmp:Gcoordinate-monotone}, \ref{assmp:Gtech1}, and \ref{assmp:Gtech3}, the sequence of $G$-convex functions converges, by applying results from Lemma \ref{lemma1}; then we will prove that the limit function is also $G$-convex. 
 	Assume $\{u_n\}_{n\in \N}$ is a sequence of $G$-convex functions in $X$ such that for every open convex set $\omega \subset \subset X$, the following holds:
 	\begin{equation*}
-	\sup\limits_{n} ||u_n||_{W^{1,1}(\omega )} < +\infty.
+	\sup\limits_{n} \norm{u_n}_{W^{1,1}(\omega )} < +\infty.
 	\end{equation*}
 
-	{\bf Step 1:} By Assumption \ref{assmp:Gtech1}, there exists $k>0$, such that for any $(x, x')\in X^2$, $y\in cl(Y)$ and $z\in cl(Z)$, one has $\left|\left|D_xG(x,y,z)-D_x G(x',y,z)\right|\right| \le k||x-x'||$. Denote $G_{\lambda}(x,y,z) := G(x,y,z)+\lambda||x||^2$, where $\lambda \ge \frac{1}{2}\Lip(D_xG)$, with $$\Lip(D_xG)
-	:=\sup\limits_{\{(x,x',y,z)\in X\times X\times  cl(Y) \times cl(Z):~x \neq x'\}} \frac{||D_xG(x,y,z)-D_x G(x',y,z)||}{||x-x'||}.$$ %\le k$.
+	{\bf Step 1:} By Assumption \ref{assmp:Gtech1}, there exists $k>0$ such that for any $(x, x')\in X^2$, $y\in cl(Y)$, and $z\in cl(Z)$, one has $$\norm{D_xG(x,y,z)-D_x G(x',y,z)} \le k\norm{x-x'}.$$ Denote $G_{\lambda}(x,y,z) := G(x,y,z)+\lambda\norm{x}^2$, where $\lambda \ge \frac{1}{2}\Lip(D_xG)$ with $$\Lip(D_xG)
+	:=\sup\limits_{\{(x,x',y,z)\in X\times X\times  cl(Y) \times cl(Z):~x \neq x'\}} \frac{\norm{D_xG(x,y,z)-D_x G(x',y,z)}}{\norm{x-x'}}.$$ %\le k$.
 	
 	Then, for any $(x, x')\in X^2$, by Cauchy–Schwarz inequality, one has 
 	\begin{flalign*}
 		& \left\langle D_xG_{\lambda}(x,y,z)-D_x G_{\lambda}(x',y,z) , x-x'\right\rangle &&\\
-		= & ~\left\langle D_xG(x,y,z)-D_x G(x',y,z) , x-x'\right\rangle + 2\lambda ||x-x'||^2 && \text{(By definition of $G_{\lambda}(x,y,z)$)}\\
-		\ge & ~-\left|\left|D_xG(x,y,z)-D_x G(x',y,z)\right|\right| ||x-x'||+ 2\lambda ||x-x'||^2 &&\text{(By Cauchy–Schwarz inequality)}\\
-		\ge & ~\left[2\lambda - \Lip(D_xG)\right]||x-x'||^2 &&\text{(By definition of $\Lip(D_xG)$)}\\
+		= & ~\left\langle D_xG(x,y,z)-D_x G(x',y,z) , x-x'\right\rangle + 2\lambda \norm{x-x'}^2 && \text{(By definition of $G_{\lambda}(x,y,z)$)}\\
+		\ge & ~-\norm{D_xG(x,y,z)-D_x G(x',y,z)} \norm{x-x'}+ 2\lambda \norm{x-x'}^2 &&\text{(By Cauchy–Schwarz inequality)}\\
+		\ge & ~\left[2\lambda - \Lip(D_xG)\right]\norm{x-x'}^2 &&\text{(By definition of $\Lip(D_xG)$)}\\
 		\ge & ~0.&&
 	\end{flalign*} 
 	
-	Thus, $G_{\lambda}(\cdot, y, z)$ is a convex function on $X$, for any fixed $(y, z) \in cl(Y) \times cl(Z).$\medskip
+	Thus, $G_{\lambda}(\cdot, y, z)$ is a convex function on $X$ for any fixed $(y, z) \in cl(Y) \times cl(Z).$\medskip
 	
 {\bf Step 2:}	Since $u_n$ is $G$-convex, by Lemma \ref{convex-subdiff}, we know $$u_n(x) = \max\limits_{x'\in X, y\in \partial^G u_n(x')} G(x,y,H(x',y,u_n(x'))).$$ 
-Define $v_n(x):= u_n(x) +\lambda ||x||^2$. Then 
+Define $v_n(x):= u_n(x) +\lambda \norm{x}^2$. Then 
 \begin{flalign*}
-	v_n(x) =& \max\limits_{x'\in X, y\in \partial^G u_n(x')}G(x,y,H(x',y,u_n(x'))) +\lambda ||x||^2 \\
-	=& \max\limits_{x'\in X, y\in \partial^G u_n(x')}\left[G(x,y,H(x',y,u_n(x'))) +\lambda ||x||^2\right]\\
+	v_n(x) =& \max\limits_{x'\in X, y\in \partial^G u_n(x')}G(x,y,H(x',y,u_n(x'))) +\lambda \norm{x}^2 \\
+	=& \max\limits_{x'\in X, y\in \partial^G u_n(x')}\left[G(x,y,H(x',y,u_n(x'))) +\lambda \norm{x}^2\right]\\
 	=& \max\limits_{x'\in X, y\in \partial^G u_n(x')} G_{\lambda}(x,y,H(x',y,u_n(x'))).	
 \end{flalign*}
 
 	
-	Since $G_{\lambda}(\cdot,y,H(x',y,u_n(x')))$ is convex for each $(x', y)$, we have $v_n(x)$, as supremum of convex functions, is also convex, for all $n \in \N$.\medskip
+	Since $G_{\lambda}(\cdot,y,H(x',y,u_n(x')))$ is convex for each $(x', y)$, we have $v_n(x)$, as supremum of convex functions, is also convex for each $n \in \N$.\medskip
 	
 	
 	
-{\bf Step 3:}	Since $v_n:= u_n +\lambda||x||^2$ and $\sup\limits_{n}||u_n||_{W^{1,1}(\omega)} < +\infty$, one has $\sup\limits_{n}||v_n||_{W^{1,1}(\omega)} < +\infty$, for any $\omega \subset \subset X$. Hence $\{v_n\}_{n\in \N}$ satisfies all the assumptions of Lemma \ref{lemma1}. So, by conclusion of Lemma \ref{lemma1}, there exists a convex function $v^*$ in $X$ and a measurable set $A \subset X$, such that $\dim_{H} (X \setminus A)\le M-1$ and up to a subsequence, $\{v_n\}_{n\in \N}$ converges to $v^*$ uniformly on compact subset of $X$ and $\{D v_n\}_{n\in \N}$ converges to $D v^*$ pointwise in A.
+{\bf Step 3:}	Since $v_n:= u_n +\lambda\norm{x}^2$ and $\sup\limits_{n}\norm{u_n}_{W^{1,1}(\omega)} < +\infty$, one has 
+	$$\sup\limits_{n}\norm{v_n}_{W^{1,1}(\omega)} < +\infty \text{ for any $\omega \subset \subset X$.} $$
+
+Hence $\{v_n\}_{n\in \N}$ satisfies all the assumptions of Lemma \ref{lemma1}. So, by conclusion of Lemma \ref{lemma1}, there exists a convex function $v^*$ in $X$ and a measurable set $A \subset X$ such that $\dim_{H} (X \setminus A)\le M-1$ and up to a subsequence, $\{v_n\}_{n\in \N}$ converges to $v^*$ uniformly on compact subset of $X$ and $\{D v_n\}_{n\in \N}$ converges to $D v^*$ pointwise in A.
 	
-	Let $u^*(x):=v^*(x)-\lambda||x||^2$, then  $\{u_n\}_{n\in \N}$ converges to $u^*$ uniformly on compact subset of $X$ and $\{D u_n\}_{n\in \N}$ converges to $D u^*$ pointwise in A.\medskip
+	Let $u^*(x):=v^*(x)-\lambda\norm{x}^2$, then  $\{u_n\}_{n\in \N}$ converges to $u^*$ uniformly on compact subset of $X$ and $\{D u_n\}_{n\in \N}$ converges to $D u^*$ pointwise in A.\medskip
 	
 {\bf Step 4:}	Finally, let us prove that $u^*$ is $G$-convex.\medskip
 
-	Define $\Gamma(x):=\cap_{i\ge 1}\overline{\cup_{n\ge i}\partial^G u_n(x)}$, for all $x\in X$.\medskip
+	Define $\Gamma(x):=\cap_{i\ge 1}\overline{\cup_{n\ge i}\partial^G u_n(x)}$ for all $x\in X$.\medskip
 	%$\tilde{u}(x):=\sup\limits_{x'\in X, y\in \Gamma (x')}G(x,y,H(x',y,u^*(x')))$, where\medskip 
 	
 	
-{\bf	Step 4.1:} Claim: For any $x'\in X$, we have $\Gamma(x') \neq \emptyset$.\medskip
+%{\bf	Step 4.1:} 
+\noindent
+{\it Claim}. For any $x'\in X$, we have $\Gamma(x') \neq \emptyset$.\medskip
 	
-	Proof of this Claim: 
+%	Proof of this Claim: 
+\begin{proof}
+	{\bf Step 4.1:} Let us first show for any $\omega \subset\subset X$, one has $$\sup\limits_{n}\norm{u_n}_{L^{\infty}(\bar{\omega})}<+\infty.$$
 	
-	{\bf Step 4.1.1:} Let us first show for any $\omega \subset\subset X$, one has $\sup\limits_{n}||u_n||_{L^{\infty}(\bar{\omega})}<+\infty$.
+	Suppose not, then there exits a sequence $\{x_n\}_{n\in \N}\subset \bar{\omega}$ such that $\limsup\limits_{n}|u_n(x_n)|=+\infty$.
 	
-	If not, then there exits a sequence $\{x_n\}_{n\in \N}\subset \bar{\omega}$, such that $\limsup\limits_{n}|u_n(x_n)|=+\infty$.
+	Since $\bar{\omega}$ is compact, there exists $\bar{x}\in \bar{\omega}$ such that, up to a subsequence, $x_n\rightarrow \bar{x}$ as $n \rightarrow \infty$. Again up to a subsequence, we may assume that $u_n(x_n)\rightarrow +\infty$ as $n \rightarrow \infty$.
 	
-	Since $\bar{\omega}$ is compact, there exists $\bar{x}\in \bar{\omega}$, such that, up to a subsequence, $x_n\longrightarrow \bar{x}$ as $n \longrightarrow \infty$. Again up to a subsequence, we may assume that $u_n(x_n)\longrightarrow +\infty$ as $n \longrightarrow \infty$.
-	
-	Since $\bar{x} \in \bar{\omega} \subset \subset X$, there exists $\delta >0$, such that $\bar{x}+\delta x_{-1} \in X$, where $x_{-1}:=(\frac{1}{\sqrt{M}}, \frac{1}{\sqrt{M}}, \cdots, \frac{1}{\sqrt{M}})$ is a unit vector in $\R^M$ with each coordinate equal to $\frac{1}{\sqrt{M}}$. For any $x>\bar{x} + \delta x_{-1}$, there exists $n_0\in \N$, such that for any $n>n_0$, we have $x>x_n$. By Proposition \ref{nondecreasing}, $u_n$ are nondecreasing, and thus
+	Since $\bar{x} \in \bar{\omega} \subset \subset X$, there exists $\delta >0$ such that $\bar{x}+\delta x_{-1} \in X$, where $x_{-1}:=(\frac{1}{\sqrt{M}}, \frac{1}{\sqrt{M}}, \cdots, \frac{1}{\sqrt{M}})$ is a unit vector in $\R^M$ with each coordinate equal to $\frac{1}{\sqrt{M}}$. For any $x>\bar{x} + \delta x_{-1}$, there exists $n_0\in \N$ such that for any $n>n_0$, we have $x>x_n$. By Proposition \ref{nondecreasing}, $u_n$ are nondecreasing, and thus
 	\begin{equation}\label{eqn_integral}
-	\int_{\{x\in X|~ x>\bar{x} +\delta x_{-1}\}} u_n(x)dx \ge m\left(\left\{x\in X|~ x> \bar{x}+\delta x_{-1}\right\}\right) u_n(x_n)\longrightarrow +\infty,
+	\int_{\{x\in X|~ x>\bar{x} +\delta x_{-1}\}} u_n(x)dx \ge m\left(\left\{x\in X|~ x> \bar{x}+\delta x_{-1}\right\}\right) u_n(x_n)\rightarrow +\infty.
 	\end{equation}
-	where $m\left(\left\{x\in X|~ x>\bar{x}+\delta x_{-1}\right\}\right)$ denotes Lebesgue measure of the set $\{x\in X|~ x>\bar{x}+\delta x_{-1}\}$, which is positive.
+	Here $m\left(\left\{x\in X|~ x>\bar{x}+\delta x_{-1}\right\}\right)$ denotes Lebesgue measure of the set $\{x\in X|~ x>\bar{x}+\delta x_{-1}\}$, which is positive.
 	
-	Denote $\omega' := \left\{x\in X|~ x>\bar{x}+\delta x_{-1}\right\}$. Therefore, we have $$||u_n||_{W^{1,1}(\omega')} \ge ||u_n||_{L^{1}(\omega')} \ge \int_{\omega'} u_n(x) dx \longrightarrow +\infty.$$ This implies $\sup\limits_{n} ||u_n||_{W^{1,1}(\omega')} = +\infty$.
+	Denote $\omega' := \left\{x\in X|~ x>\bar{x}+\delta x_{-1}\right\}$. Therefore, we have $$\norm{u_n}_{W^{1,1}(\omega')} \ge \norm{u_n}_{L^{1}(\omega')} \ge \int_{\omega'} u_n(x) dx \rightarrow +\infty.$$ 
+	This implies 
+	$$\sup\limits_{n} \norm{u_n}_{W^{1,1}(\omega')} = +\infty.$$
 	
-	On the other hand, since both $X$ and $\left\{x\in \R^M|~ x> \bar{x}+\delta x_{-1} \right\}$ are open and convex, we have  $\omega' = X \cap \{x\in \R^M|~ x> \bar{x}+\delta x_{-1} \}$ is also open and convex. Therefore, by assumption, we have $\sup\limits_{n} ||u_n||_{W^{1,1}(\omega')} < +\infty.$ 
+	On the other hand, since both $X$ and the set $\left\{x\in \R^M|~ x> \bar{x}+\delta x_{-1} \right\}$ are open and convex, we have  $\omega' = X \cap \{x\in \R^M|~ x> \bar{x}+\delta x_{-1} \}$ is also open and convex. Therefore, by assumption, we have 
+	$$\sup\limits_{n} \norm{u_n}_{W^{1,1}(\omega')} < +\infty.$$ 
 	
-	This is a contradiction. Thus for any $\omega \subset \subset X$, we have $\sup\limits_{n}||u_n||_{L^{\infty}(\bar{\omega})}<+\infty$.\medskip
+	This is a contradiction. Thus for any $\omega \subset \subset X$, we have $\sup\limits_{n}\norm{u_n}_{L^{\infty}(\bar{\omega})}<+\infty$.\medskip
 	
-	{\bf Step 4.1.2:} For any fixed $x'\in X$, there exists an open set $\omega \subset \subset X$ and $\delta>0$, such that $x'\in \omega$ and $\omega + \delta \overline{B(0,1)} \subset \subset X$.
+	{\bf Step 4.2:} For any fixed $x'\in X$, there exists an open set $\omega \subset \subset X$ and $\delta>0$ such that $x'\in \omega$ and $\omega + \delta \overline{B(0,1)} \subset \subset X$.
 	
-	From Step 4.1.1, we know  $\sup\limits_{n}||u_n||_{L^{\infty}\left(\omega + \delta \overline{B(0,1)}\right)} < +\infty$. 
-	So there exists $R>0$, such that for all $n\in \N$, we have $|u_n(x)|\le R$, for all $x \in \omega + \delta \overline{B(0,1)}$. Since $u_n$ are $G$-convex functions, by Proposition~\ref{Subdiff/Bdd}, there exists $T = T(\omega, \delta, R) >0$, independent of $n$, such that $||y||\le T$, for any $y \in \partial^G u_n(x')$ and any $n\in \N$. Thus, there exists a sequence $\{y_n\}_{n\in \N}$, such that $y_n \in \partial^G u_n(x')$ and $||y_n||\le T$, for all $n\in \N$.
+	From Step 4.1, we know  $\sup\limits_{n}\norm{u_n}_{L^{\infty}\left(\omega + \delta \overline{B(0,1)}\right)} < +\infty$. 
+	There exists $R>0$ such that for all $n\in \N$, we have 
+	$$|u_n(x)|\le R \text{ for all $x \in \omega + \delta \overline{B(0,1)}$.}$$ 
 	
-	By compactness theorem for sequence $\{y_n\}_{n\in \N}$,  there exists $y'$, such that, up to a subsequence, $y_n \longrightarrow y'$ as $n \longrightarrow \infty$. Thus, we have $y' \in \overline{\cup_{n\ge i}\partial^G u_n(x')}$, for all $i\in \N$. It implies $$y' \in \cap_{i\ge 1} \overline{\cup_{n\ge i}\partial^G u_n(x')} = \Gamma (x').$$ 
+	Since $u_n$ are $G$-convex functions, by Proposition~\ref{Subdiff/Bdd}, there exists $T = T(\omega, \delta, R) >0$, independent of $n$, such that $\norm{y}\le T$ for any $y \in \partial^G u_n(x')$ and any $n\in \N$. Thus, there exists a sequence $\{y_n\}_{n\in \N}$ such that $y_n \in \partial^G u_n(x')$ and $\norm{y_n}\le T$ for all $n\in \N$.\medskip
 	
-	Therefore $\Gamma(x') \neq \emptyset$, for all $x' \in X$.\medskip
+	By compactness theorem for sequence $\{y_n\}_{n\in \N}$,  there exists $y'$ such that, up to a subsequence, $y_n \rightarrow y'$ as $n \rightarrow \infty$. Thus, we have 
+	$$y' \in \overline{\cup_{n\ge i}\partial^G u_n(x')} \text{ for all $i\in \N$. }$$
+	It implies $$y' \in \cap_{i\ge 1} \overline{\cup_{n\ge i}\partial^G u_n(x')} = \Gamma (x').$$ 
+	
+	Therefore $\Gamma(x') \neq \emptyset$ for all $x' \in X$.\medskip
+\end{proof}	
+	
 	
 %%%	%By definition of $\tilde{u}$, $\tilde{u}(x)\ge G(x,y, H(x,y,u^*(x))) =  u^*(x)$. {\color{} Since both $X$ and $\Gamma(x')$ are compact}, for any $x_0 \in X$, there exist $x_0'\in X$, $y_0\in \Gamma(x_0')$, such that $\tilde{u}(x_0) = G(x_0, y_0, H(x_0', y_0, u^*(x_0')))$. And for any $x \in X$, $\tilde{u}(x) = \sup\limits_{x'\in X, y\in \Gamma (x')} G(x, y, H(x',y,u^*(x') )) \ge G(x, y_0, H(x_0', y_0, u^*(x_0')))$. By definition, $\tilde{u}$ is $G$-convex. \medskip
 	
 	
-	{\bf Step 4.2:} Now for any fixed $x\in X$, and any $y\in \Gamma(x)$, by Cantor's diagonal argument, there exists $\{y_{n_l}\}_{l\in \N}$, such that $y_{n_l} \in \partial^G u_{n_l}(x)$ and $\lim\limits_{l\rightarrow \infty} y_{n_l} = y$.
-	For any $l\in \N$, by definition of $G$-subdifferentiability,
-	$u_{n_l}(x')\ge G(x', y_{n_l}, H(x, y_{n_l}, u_{n_l}(x)))$, for any $x' \in X$. Take limit $l \longrightarrow \infty$ at both sides, we get $u^*(x') \ge G(x', y, H(x, y, u^*(x)))$, for any $x'\in X$. Here we use the fact that both functions $G$ and
+%	{\bf Step 4.2:} 
+	Now for any fixed $x\in X$ and any $y\in \Gamma(x)$, by Cantor's diagonal argument, there exists $\{y_{n_l}\}_{l\in \N}$ such that $$y_{n_l} \in \partial^G u_{n_l}(x) \text{ and } \lim\limits_{l\rightarrow \infty} y_{n_l} = y.$$
+	For any $l\in \N$, by definition of $G$-subdifferentiability, one has
+	$$u_{n_l}(x')\ge G(x', y_{n_l}, H(x, y_{n_l}, u_{n_l}(x))) \text{	for any $x' \in X$.}$$
+	Take limit $l \rightarrow \infty$ at both sides, we get 
+	$$u^*(x') \ge G(x', y, H(x, y, u^*(x))) \text{	for any $x'\in X$.}$$ 
+	Here we use the fact that both functions $G$ and
 		$H$ are continuous by Assumption \ref{assmp:Gregular} and Proposition \ref{lemma_continuity}.
 		%since $G$ is continuous and strictly decreasing with respect to its third variable.} 
 Then by definition of $G$-subdifferentiability, the above inequality implies $y\in \partial ^G u^*(x)$. 
 
-	So $\partial^G u^*(x)\neq \emptyset$, for any $x\in X$, which means $u^*$ is G-subdifferentiable everywhere. By Lemma \ref{convex-subdiff}, $u^*$ is $G$-convex.
+	So $\partial^G u^*(x)\neq \emptyset$ for all $x\in X$, which means $u^*$ is G-subdifferentiable everywhere. By Lemma \ref{convex-subdiff}, $u^*$ is $G$-convex.
 \end{proof}
 
 \vspace{0.3cm}
 
 \begin{proof}[Proof of the existence theorem]
 {\bf Step 1:} %{Define $\Phi_u: x \longmapsto \argmin_{\partial^G u(x)} -\pi(x, \cdot, H(x,\cdot,u(x)))$, then by Proposition \ref{Subdiff/Bdd}, the measurable selection theorem (cf. \cite[Theorem 1.2, Chapter VIII]{EkelandTemam76}) and Lusin Theorem, one has $\Phi_u$ admits measurable selections. \medskip}
-{Define $\Phi_u: x \longmapsto argmin_{\partial^G u(x)} \left\{-\pi(x, \cdot, H(x,\cdot,u(x)))\right\}$, then by Proposition \ref{Subdiff/Bdd}, for any compact set $\omega \subset X$, one has $\cup_{x \in \omega} \partial^G u(x)$ is nonempty and compact, $\Phi_u(x)$ is nonempty and compact for all $x\in \omega$, and $\cup_{x \in \omega} \left\{(x, y)| y \in \Phi_u(x)\right\}$ is a Borel set. By the measurable selection theorem (cf. \cite[Theorem 1.2, Chapter VIII]{EkelandTemam76}), there exists a measurable mapping $y: \omega \longrightarrow Y$ such that for almost all $x$, $y(x) \in \Phi_u(x)$. Let $\{\omega_n\}_{n\in \N}%_{n=1}^{\infty}
-	$ denote a sequence of compact sets such that $\omega_1 \subset \omega_2 \subset ... \subset \omega_n \subset ...\subset X$ with $\cup_{n}\omega_n = X$. On each $\omega_n$, there exists a measurable selection map $y^n: \omega_n \longrightarrow Y$. Define $\bar{y}: X \longrightarrow Y$, such that $\bar{y} = y^1$ on $\omega_1$ and $\bar{y} = y^n$ on $\omega_n\setminus \omega_{n-1}$ for $n \ge 2$. Then $\bar{y}$ is a measurable selection of $\Phi_u$, i.e., $\bar{y}$ is measurable and $\bar{y}(x)\in \Phi_u(x)$ for almost every $x$. \medskip}
 
-Let $\{(u_n, y_n)\}_{n\in \N}$ be a maximizing sequence of $(P)$, where maps $u_n: X\longrightarrow \R$ and $y_n: X\longrightarrow cl(Y)$, for all $n\in \N$. Without loss of generality, we may assume that for all $n\in \N$, $y_n(\cdot)$ is measurable and $y_n(x) \in \Phi_{u_n}(x)$, for each $x\in X$. Starting from $\{(u_n, y_n)\}_{n\in \N}$, we would find a value-product pair $(u^*, y^*)$ satisfying all the constraints in \eqref{Principal_new_problem}, and show that it is actually a maximizer.\medskip
+For any $G$-convex $u$, define a point-to-set mapping on $X$ as
+$$\Phi_u: x \longmapsto argmin_{\partial^G u(x)} \left\{-\pi(x, \cdot, H(x,\cdot,u(x)))\right\}.$$ 
+For each $x \in X$, since $u$ is $G$-convex, $\partial^G u(x) \neq \emptyset$. By definition,  $\partial^G u(x)$ is a closed set. Moreover, by Proposition \ref{Subdiff/Bdd} it is compact. Since both $-\pi$ and $H$ are continuous, $-\pi(x, \cdot, H(x,\cdot,u(x)))$ is also continuous and has minimum on $\partial^G u(x)$. That is, $\Phi_u(x) \neq \emptyset$. Again, since $-\pi(x, \cdot, H(x,\cdot,u(x)))$ is continuous and $\partial^G u(x)$ is compact, $\Phi_u(x)$ is also a compact set. 
+
+
+By Proposition \ref{Subdiff/Bdd}, for any compact set $\omega \subset X$, $\cup_{x \in \omega} \partial^G u(x)$ is %{nonempty and} 
+bounded. Besides, it is compact. $\Phi_u(x)$ is nonempty and compact for all $x\in \omega$, and $\cup_{x \in \omega} \left\{(x, y)|~ y \in \Phi_u(x)\right\}$ is a Borel set. By the measurable selection theorem (cf. \cite[Theorem 1.2, Chapter VIII]{EkelandTemam76}), there exists a measurable mapping $y: \omega \rightarrow Y$ such that for almost all $x$, $y(x) \in \Phi_u(x)$. Let $\{\omega_n\}_{n\in \N}%_{n=1}^{\infty}
+	$ denote a sequence of compact sets such that $\omega_1 \subset \omega_2 \subset ... \subset \omega_n \subset ...\subset X$ with $\cup_{n}\omega_n = X$. On each $\omega_n$, there exists a measurable selection map $y^n: \omega_n \rightarrow Y$. Define $\bar{y}: X \rightarrow Y$ such that $\bar{y} = y^1$ on $\omega_1$ and $\bar{y} = y^n$ on $\omega_n\setminus \omega_{n-1}$ for $n \ge 2$. Then $\bar{y}$ is a measurable selection of $\Phi_u$, i.e., $\bar{y}$ is measurable and $\bar{y}(x)\in \Phi_u(x)$ for almost every $x$. \medskip
+
+Let $\{(u_n, y_n)\}_{n\in \N}$ be a maximizing sequence of $(P)$, where maps $u_n: X\rightarrow \R$ and $y_n: X\rightarrow cl(Y)$ for all $n\in \N$. Without loss of generality, we may assume that for all $n\in \N$, $y_n(\cdot)$ is measurable and $y_n(x) \in \Phi_{u_n}(x)$ for each $x\in X$. Starting from $\{(u_n, y_n)\}_{n\in \N}$, we would find a value-product pair $(u^*, y^*)$ satisfying all the constraints in \eqref{Principal_new_problem}, and show that it is actually a maximizer.\medskip
 	
-{\bf Step 2:} From Assumption \ref{assmp:Gtech0}, there exist $\alpha \ge 1$, $a_1, a_2> 0$ and $b\in \R$,  such that for each $x\in X$ and $n \in \N$,
+{\bf Step 2:} From Assumption \ref{assmp:Gtech0}, there exist $\alpha \ge 1$, $a_1, a_2> 0$, and $b\in \R$ such that for each $x\in X$ and $n \in \N$,
 \begin{flalign*}
-	a_1 ||y_n(x)||_{\alpha}^{\alpha} \le & -\pi(x,y_n(x),H(x, y_n(x), u_n(x))) - a_2 u_n(x) +b \\
-	\le &  -\pi(x,y_n(x),H(x, y_n(x), u_n(x)))- a_2 u_{\emptyset}(x) + b,
+	a_1 \norm{y_n(x)}_{\alpha}^{\alpha} \le & -\pi(x,y_n(x),H(x, y_n(x), u_n(x))) - a_2 u_n(x) +b \\
+	\le &  -\pi(x,y_n(x),H(x, y_n(x), u_n(x)))- a_2 u_{\emptyset}(x) + b.
 \end{flalign*}
 %\begin{flalign*}
-%	a ||y_n(x)||_{\alpha}^{\alpha}	 \le & G(x,y_n(x),H(x,y_n(x),u_n(x))) -b \\
+%	a \norm{y_n(x)}_{\alpha}^{\alpha}	 \le & G(x,y_n(x),H(x,y_n(x),u_n(x))) -b \\
 %	\le & C_0 - \pi(x,y_n(x),H(x,y_n(x),u_n(x))) -b, 
 %\end{flalign*}
-where the second inequality comes from $u_n\ge u_{\emptyset}$. Together with Assumption \ref{assmp:Pi1}, this implies $\{y_n\}_{n\in \N}$ is bounded in $L^{\alpha}(X)$.\medskip
+Here the second inequality comes from $u_n\ge u_{\emptyset}$. Together with Assumption \ref{assmp:Pi1}, this implies $\{y_n\}_{n\in \N}$ is bounded in $L^{\alpha}(X)$.\medskip
 
 
 	By the participation constraint and Assumption \ref{assmp:Gtech0}, we know 
@@ -831,9 +927,9 @@ where the second inequality comes from $u_n\ge u_{\emptyset}$. Together with Ass
 
 Together with Assumption \ref{assmp:Pi1}, we know $\{u_n\}_{n\in \N}$ is bounded in $L^1(X)$.\medskip
 
-	By $G$-subdifferentiability, $Du_n(x) = D_x G(x, y_n(x), H(x,y_n(x),u_n(x)))$. By Assumption \ref{assmp:Gtech2}, we have $||Du_n||_{1}\le c||y_n||_{\beta}^{\beta}+d \le c\left(N+||y_n||_{\alpha}^{\alpha}\right)+d$. The last inequality holds because $\beta \in (0, \alpha]$. Because $X$ is bounded and $\{y_n\}_{n\in \N}$ is bounded in $L^{\alpha}(X)$, we know $\{Du_n\}_{n\in \N}$ is bounded in $L^1(X)$.\medskip
+	By $G$-subdifferentiability, $Du_n(x) = D_x G(x, y_n(x), H(x,y_n(x),u_n(x)))$. By Assumption \ref{assmp:Gtech2}, we have $$\norm{Du_n}_{1}\le c\norm{y_n}_{\beta}^{\beta}+d \le c\left(N+\norm{y_n}_{\alpha}^{\alpha}\right)+d.$$ The last inequality holds because $\beta \in (0, \alpha]$. Because $X$ is bounded and $\{y_n\}_{n\in \N}$ is bounded in $L^{\alpha}(X)$, we know $\{Du_n\}_{n\in \N}$ is bounded in $L^1(X)$.\medskip
 	
-	Since both $\{u_n\}_{n\in \N}$ and $\{Du_n\}_{n\in \N}$ are bounded in $L^1(X)$, one has $\{u_n\}_{n\in \N}$ is bounded in $W^{1,1}(X)$. By Proposition \ref{proposition:convergence}, there exists a $G$-convex function $u^*$ on $X$, such that, up to a subsequence, $\{u_n\}_{n\in \N}$ converges to $u^*$ in $L^1$ and uniformly on compact subset of $X$, and $\{D u_n\}_{n\in \N}$ converges to $D u^*$ almost everywhere.\medskip
+	Since both $\{u_n\}_{n\in \N}$ and $\{Du_n\}_{n\in \N}$ are bounded in $L^1(X)$, one has $\{u_n\}_{n\in \N}$ is bounded in $W^{1,1}(X)$. By Proposition \ref{proposition:convergence}, there exists a $G$-convex function $u^*$ on $X$ such that, up to a subsequence, $\{u_n\}_{n\in \N}$ converges to $u^*$ in $L^1$ and uniformly on compact subset of $X$, and $\{D u_n\}_{n\in \N}$ converges to $D u^*$ almost everywhere.\medskip
 
 {\bf Step 3: } Denote $y^*(x)$ as a measurable selection of $\Phi_{u^*}$. Let us show $(u^*,y^*)$ is a maximizer of the principal's program $(P)$. \medskip
 
@@ -850,26 +946,29 @@ Together with Assumption \ref{assmp:Pi1}, we know $\{u_n\}_{n\in \N}$ is bounded
 
 By Assumption \ref{assmp:Pi1}, $u_{\emptyset}$ is measurable, thus one can apply Fatou's lemma and get
 %we have $\pi(x, y_n(x), H(x, y_n(x), u_n(x))) \le  C_0$, for all .
-
 	\begin{align}\label{3}
 	\begin{split}
 	\sup \tilde{\Pi}(u,y) & = \limsup\limits_{n} \tilde{\Pi}(u_n, y_n) \\
-	&= -\liminf\limits_{n} \int_{X} - \pi(x, y_n(x), H(x,y_n(x),u_n(x)))  ~d\mu(x)\\
-	& \le - \int_{X} \liminf\limits_{n} - \pi(x, y_n(x), H(x,y_n(x),u_n(x)))~ d\mu(x). \\
+	&= -\liminf\limits_{n} \int_{X} - \pi(x, y_n(x), H(x,y_n(x),u_n(x)))  ~dx\\
+	& \le - \int_{X} \liminf\limits_{n} - \pi(x, y_n(x), H(x,y_n(x),u_n(x)))~ dx. \\
 	\end{split}
 	\end{align}
 	
-Let $\gamma(x):=\liminf\limits_{n} - \pi(x, y_n(x), H(x,y_n(x),u_n(x)))$. 
-For each $x\in X$, by extracting a subsequence of $\{y_n\}_{n\in \N}$, which is denoted as $\{y_{n^x_l}\}_{l\in \N}$, we assume $\gamma(x) = \lim\limits_{l \rightarrow \infty} - \pi(x, y_{n_l^x}(x), H(x,y_{n_l^x}(x),u_{n_l^x}(x)))$. \medskip
+Define $$\gamma(x):=\liminf\limits_{n} - \pi(x, y_n(x), H(x,y_n(x),u_n(x))). $$
+For each $x\in X$, by extracting a subsequence of $\{y_n\}_{n\in \N}$, which is denoted as $\{y_{n^x_l}\}_{l\in \N}$, we assume $$\gamma(x) = \lim\limits_{l \rightarrow \infty} - \pi(x, y_{n_l^x}(x), H(x,y_{n_l^x}(x),u_{n_l^x}(x))).$$ \medskip
 	
 	{\bf Step 3.2: } 	For any fixed $x \in X$, since $u_{n_l^x}$ are $G$-convex functions and $\{u_{n_l^x}\}_{l\in \N}$ is bounded in $L^1(X)$% and bounded from below by a $L^1$ function
 	, by %Proposition \ref{nondecreasing} and 
-	similar arguments as in the Step 4.1.1 of the proof of Proposition \ref{proposition:convergence}, $\{u_{n_l^x}\}_{l\in \N}$ is also bounded in $L_{loc}^{\infty}(X)$. Then by Proposition \ref{Subdiff/Bdd}, $\{y_{n_l^x}\}_{l\in \N}$ is also bounded in $L_{loc}^{\infty}(X)$. Thus there exists a subsequence of $\{y_{n_l^x}(x)\}_{l\in \N}$, again denoted as $\{y_{n_l^x}(x)\}_{l\in \N}$, that converges. Denote $\tilde{y}$ a mapping on $X$ such that $y_{n_l^x}(x) \longrightarrow \tilde{y}(x)$ as $l \longrightarrow \infty$, for all $x\in X$.\medskip
+	similar arguments as in the Step 4.1 of the proof of Proposition \ref{proposition:convergence}, $\{u_{n_l^x}\}_{l\in \N}$ is also bounded in $L_{loc}^{\infty}(X)$. Then by Proposition \ref{Subdiff/Bdd}, $\{y_{n_l^x}\}_{l\in \N}$ is also bounded in $L_{loc}^{\infty}(X)$. Thus there exists a subsequence of $\{y_{n_l^x}(x)\}_{l\in \N}$, again denoted as $\{y_{n_l^x}(x)\}_{l\in \N}$, that converges. Denote $\tilde{y}$ a mapping on $X$ such that $y_{n_l^x}(x) \rightarrow \tilde{y}(x)$ as $l \rightarrow \infty$ for all $x\in X$.\medskip
 	
-	Since $\pi$ and $H$ are continuous, we have $ \gamma(x)= - \pi(x, \tilde{y}(x), H(x,\tilde{y}(x),u^*(x)))$.\medskip
+	Since $\pi$ and $H$ are continuous, we have 
+	$$ \gamma(x)= - \pi(x, \tilde{y}(x), H(x,\tilde{y}(x),u^*(x))).$$
 	
-	For each fixed $x\in X$ and any $l \in \N$, since $u_{n_l^x}$ are $G$-convex and $y_{n_l^x}(x) \in \partial^G u_{n_l^x}(x)$, for any $x' \in X$, we have $$u_{n_l^x}(x')\ge G(x', y_{n_l^x}(x),H(x,y_{n_l^x}(x),u_{n_l^x}(x))).$$ 
-	Take limit $l \longrightarrow \infty$ at both sides, we get $u^*(x')\ge G(x', \tilde{y}(x),H(x,\tilde{y}(x),u^*(x)))$, for any $x'\in X$. By definition of $G$-subdifferentiability, we have $\tilde{y}(x)\in \partial^Gu^*(x)$. \medskip
+	For each fixed $x\in X$ and any $l \in \N$, since $u_{n_l^x}$ are $G$-convex and $y_{n_l^x}(x) \in \partial^G u_{n_l^x}(x)$, we have 
+	$$u_{n_l^x}(x')\ge G(x', y_{n_l^x}(x),H(x,y_{n_l^x}(x),u_{n_l^x}(x))) \text{  for any $x' \in X$}.$$ 
+	Take limit $l \rightarrow \infty$ at both sides, we get 
+	$$u^*(x')\ge G(x', \tilde{y}(x),H(x,\tilde{y}(x),u^*(x))) \text{ for any $x'\in X$.}$$
+	 By definition of $G$-subdifferentiability, we have $\tilde{y}(x)\in \partial^Gu^*(x)$. \medskip
 
 
 
@@ -879,7 +978,7 @@ For each $x\in X$, by extracting a subsequence of $\{y_n\}_{n\in \N}$, which is 
 	
 So, together with \eqref{3}, we know 
 \begin{equation}\label{minimizer}
-	\sup \tilde{\Pi}(u,y) \le - \int_{X}  \gamma(x) d\mu(x) \le - \int_{X}  - \pi(x, y^*(x), H(x,y^*(x),u^*(x))) d\mu(x) = \tilde{\Pi}(u^*,y^*).
+	\sup \tilde{\Pi}(u,y) \le - \int_{X}  \gamma(x) ~dx \le - \int_{X}  - \pi(x, y^*(x), H(x,y^*(x),u^*(x))) ~dx = \tilde{\Pi}(u^*,y^*).
 \end{equation}
 
 
@@ -923,7 +1022,7 @@ Since $\{u_n\}_{n\in \N}$ converges to $u^*$, and $u_n(x)\ge u_{\emptyset}(x)$ f
 	
 	\bibitem{Basov05} 
 	S. Basov, 
-	{\em Multidimensional Screening}, 
+	{\em Multidimensional screening}, 
 	Springer-Verlag, Berlin, 2005.
 	
 	\bibitem{Carlier01} 
@@ -956,7 +1055,7 @@ Since $\{u_n\}_{n\in \N}$ converges to $u^*$, and $u_n(x)\ge u_{\emptyset}(x)$ f
 
 	\bibitem{Evans98}
 	L. C. Evans, 
-	{\em Partial Differential Equations},
+	{\em Partial differential equations},
 	American Mathematical Society, Providence, Rhode Island, 1998.
 	
 
@@ -982,7 +1081,7 @@ Since $\{u_n\}_{n\in \N}$ converges to $u^*$, and $u_n(x)\ge u_{\emptyset}(x)$ f
 	
 {\bibitem{MartinezLegaz05} 
 	J.E. Martínez-Legaz, 
-	Generalized Convex Duality and its Economic Applications, in: 
+	Generalized convex duality and its economic applications, in: 
 	{\em Handbook of generalized convexity and generalized monotonicity}, Springer, New York, 2005, pp. 237--292.	
 }
 {
@@ -1058,7 +1157,7 @@ Since $\{u_n\}_{n\in \N}$ converges to $u^*$, and $u_n(x)\ge u_{\emptyset}(x)$ f
 
 {\bibitem{Singer97} 
 	I. Singer, 
-	{\em Abstract Convex Analysis}, Wiley-Interscience, New York, 1997.
+	{\em Abstract convex analysis}, Wiley-Interscience, New York, 1997.
 }
 
 	\bibitem{Spence74} 
@@ -1080,7 +1179,7 @@ Since $\{u_n\}_{n\in \N}$ converges to $u^*$, and $u_n(x)\ge u_{\emptyset}(x)$ f
 
 	\bibitem{Wilson93} 
 	R. Wilson, 
-	{\em Nonlinear Pricing}, 
+	{\em Nonlinear pricing}, 
 	Oxford University Press, Oxford, 1993.
 
 	\bibitem{Zhang18}
